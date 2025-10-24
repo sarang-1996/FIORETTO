@@ -37,349 +37,481 @@ html, body {
 
 <!-- MESAS DO RESTAURANTE -->
 
-#textomesas {
-font-family: 'Montserrat', sans-serif;
-font-size: 50px;
-text-align: center;
-}
 
 .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .header h1 {
-            font-size: 100px;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: bold;
-            text-align: center;
-            padding: 1% 0% 6% 0%;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            color: #888;
-            font-size: 13px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .floor-plan {
-            background: white;
-            padding: 100px 60px 0px;
-            max-width: 2000px;
-            margin: 0 auto;
-            transform:scale(1.6);
-        }
-
-        .table-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 60px;
-            gap: 80px;
-        }
-
-        .table-container {
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .table-container:hover {
-            transform: scale(1.05);
-        }
-
-        /* MESAS QUADRADAS */
-        .table.square {
-            width: 100px;
-            height: 100px;
-            background: #f5f5f5;
-            border: 2px solid #999;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .table.square .table-number {
-            width: 40px;
-            height: 40px;
-            border: 2px solid #666;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #666;
-            background: white;
-        }
-
-        /* MESAS RECTANGULARES */
-        .table.rectangular {
-            width: 280px;
-            height: 100px;
-            background: #f5f5f5;
-            border: 2px solid #999;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .table.rectangular .table-number {
-            width: 40px;
-            height: 40px;
-            border: 2px solid #666;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #666;
-            background: white;
-        }
-
-        /* MESAS REDONDAS */
-        .table.round {
-            width: 140px;
-            height: 140px;
-            background: #f5f5f5;
-            border: 2px solid #999;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .table.round .table-number {
-            width: 40px;
-            height: 40px;
-            border: 2px solid #666;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #666;
-            background: white;
-        }
-
-        /* ESTILO DAS CADEIRAS */
-        .chair {
-            position: absolute;
-            background: #ff9800;
-            border-radius: 4px;
-        }
-
-        .table.square.seats-2 .chair {
-            width: 30px;
-            height: 60px;
-        }
-
-        .table.square.seats-2 .chair.left {
-            left: -35px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .table.square.seats-2 .chair.right {
-            right: -35px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .table.square.seats-4 .chair {
-            width: 30px;
-            height: 60px;
-        }
-
-        .table.square.seats-4 .chair.left {
-            left: -35px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .table.square.seats-4 .chair.right {
-            right: -35px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .table.square.seats-4 .chair.top,
-        .table.square.seats-4 .chair.bottom {
-            width: 60px;
-            height: 30px;
-        }
-
-        .table.square.seats-4 .chair.top {
-            top: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .table.square.seats-4 .chair.bottom {
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .table.rectangular.seats-6 .chair.top,
-        .table.rectangular.seats-6 .chair.bottom {
-            width: 60px;
-            height: 30px;
-        }
-
-        .table.rectangular.seats-6 .chair.top {
-            top: -35px;
-        }
-
-        .table.rectangular.seats-6 .chair.bottom {
-            bottom: -35px;
-        }
-
-        .table.rectangular.seats-6 .chair.top.left {
-            left: 30px;
-        }
-
-        .table.rectangular.seats-6 .chair.top.center {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .table.rectangular.seats-6 .chair.top.right {
-            right: 30px;
-        }
-
-        .table.rectangular.seats-6 .chair.bottom.left {
-            left: 30px;
-        }
-
-        .table.rectangular.seats-6 .chair.bottom.center {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .table.rectangular.seats-6 .chair.bottom.right {
-            right: 30px;
-        }
-
-        .table.round.seats-4 .chair {
-            width: 50px;
-            height: 35px;
-            border-radius: 6px;
-        }
-
-        .table.round.seats-4 .chair.top-left {
-            top: -10px;
-            left: 10px;
-            transform: rotate(-35deg);
-        }
-
-        .table.round.seats-4 .chair.top-right {
-            top: -10px;
-            right: 10px;
-            transform: rotate(35deg);
-        }
-
-        .table.round.seats-4 .chair.bottom-left {
-            bottom: -10px;
-            left: 10px;
-            transform: rotate(35deg);
-        }
-
-        .table.round.seats-4 .chair.bottom-right {
-            bottom: -10px;
-            right: 10px;
-            transform: rotate(-35deg);
-        }
-
-        @media (max-width: 768px) {
-            .table-row {
-                flex-direction: column;
-                gap: 40px;
-            }
-        }
-
-<!-- FORMULÁRIO DE RESERVA -->
-
-.reservation-section {
-  display: flex;
-  justify-content: center;
-  padding: 150px 0;
-  background: #f0f0f0; /* light gray background for the section */
-  align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.reservation-form {
-  background: #ccc;       /* gray background for the form */
-  padding: 30px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 600px;           /* increased width from 300px to 600px */
-  margin-top: 300px;
-  margin-left: 40%;
+.header h1 {
+    font-size: 100px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1% 0% 1% 0%;
 }
 
-.reservation-form .form-row {
-  display: flex;
-  gap: 15px;              /* space between fields */
+.header p {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-.reservation-form .form-group {
-  flex: 1;                /* equal width for both fields */
-  display: flex;
-  flex-direction: column;
+.description {
+    color: #888;
+    font-size: 13px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.reservation-form label {
-  font-weight: bold;
-  margin-bottom: 5px;
+#textomesas {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 5% auto 80px auto;
+    line-height: 1.8;
+    color: #444;
+    padding: 0 20px 50px;
+    position: relative;
+    z-index: 1000;
+    background: none;
 }
 
-.reservation-form input,
-.reservation-form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
+.floor-plan {
+    background: white;
+    padding: 100px 60px 0px;
+    max-width: 2000px;
+    margin: 0 auto;
+    transform: scale(1.6);
+    margin-top: 100px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-.reservation-form textarea {
-  resize: vertical;      /* allow vertical resizing */
-  min-height: 80px;
+.table-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 80px;
 }
 
-.reservation-form .cta {
-  background: orange;    /* orange button */
-  color: #fff;
-  border: none;
-  padding: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-  text-transform: uppercase;
+.table-container {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-/* Responsive: stack fields on mobile */
-@media (max-width: 768px) {
-  .reservation-form {
+.table-container:hover {
+    transform: scale(1.05);
+}
+
+/* MESAS QUADRADAS */
+.table.square {
+    width: 100px;
+    height: 100px;
+    background: #f5f5f5;
+    border: 2px solid #999;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.table.square .table-number {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+    background: white;
+}
+
+/* MESAS RECTANGULARES */
+.table.rectangular {
+    width: 280px;
+    height: 100px;
+    background: #f5f5f5;
+    border: 2px solid #999;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.table.rectangular .table-number {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+    background: white;
+}
+
+/* MESAS REDONDAS */
+.table.round {
+    width: 140px;
+    height: 140px;
+    background: #f5f5f5;
+    border: 2px solid #999;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.table.round .table-number {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+    background: white;
+}
+
+/* ESTILO DAS CADEIRAS */
+.chair {
+    position: absolute;
+    background: #ff9800;
+    border-radius: 4px;
+}
+
+.table.square.seats-2 .chair {
+    width: 30px;
+    height: 60px;
+}
+
+.table.square.seats-2 .chair.left {
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.table.square.seats-2 .chair.right {
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.table.square.seats-4 .chair {
+    width: 30px;
+    height: 60px;
+}
+
+.table.square.seats-4 .chair.left {
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.table.square.seats-4 .chair.right {
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.table.square.seats-4 .chair.top,
+.table.square.seats-4 .chair.bottom {
+    width: 60px;
+    height: 30px;
+}
+
+.table.square.seats-4 .chair.top {
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.table.square.seats-4 .chair.bottom {
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.table.rectangular.seats-6 .chair.top,
+.table.rectangular.seats-6 .chair.bottom {
+    width: 60px;
+    height: 30px;
+}
+
+.table.rectangular.seats-6 .chair.top {
+    top: -35px;
+}
+
+.table.rectangular.seats-6 .chair.bottom {
+    bottom: -35px;
+}
+
+.table.rectangular.seats-6 .chair.top.left {
+    left: 30px;
+}
+
+.table.rectangular.seats-6 .chair.top.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.table.rectangular.seats-6 .chair.top.right {
+    right: 30px;
+}
+
+.table.rectangular.seats-6 .chair.bottom.left {
+    left: 30px;
+}
+
+.table.rectangular.seats-6 .chair.bottom.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.table.rectangular.seats-6 .chair.bottom.right {
+    right: 30px;
+}
+
+.table.round.seats-4 .chair {
+    width: 50px;
+    height: 35px;
+    border-radius: 6px;
+}
+
+.table.round.seats-4 .chair.top-left {
+    top: -10px;
+    left: 10px;
+    transform: rotate(-35deg);
+}
+
+.table.round.seats-4 .chair.top-right {
+    top: -10px;
+    right: 10px;
+    transform: rotate(35deg);
+}
+
+.table.round.seats-4 .chair.bottom-left {
+    bottom: -10px;
+    left: 10px;
+    transform: rotate(35deg);
+}
+
+.table.round.seats-4 .chair.bottom-right {
+    bottom: -10px;
+    right: 10px;
+    transform: rotate(-35deg);
+}
+
+/* MODAL STYLES */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 600px;
     width: 90%;
-  }
-  
-  .reservation-form .form-row {
-    flex-direction: column;
-  }
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
+
+.modal-header {
+    background: #ff9800;
+    color: white;
+    padding: 30px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.modal-header p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+.close {
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff9800;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.confirm-btn:hover {
+    background: #f57c00;
+}
+
+@media (max-width: 768px) {
+    .floor-plan {
+        transform: scale(1);
+        padding: 40px 20px;
+    }
+
+    .table-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+
+    #textomesas {
+        font-size: 16px;
+    }
+}
+
+/* FOOTER */
+        
+        .content-spacer {
+            flex: 1;
+        }
+        
+        .footer {
+            background-color: #3d3d3d;
+            color: #ffffff;
+            padding: 60px 0 30px;
+            position: relative;
+            margin-top: 20%;
+        }
+        
+        .footer h4 {
+            font-size:20px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+        
+        .footer p, .footer a {
+            color: #e0e0e0;
+            font-size: 1rem;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: #ffffff;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            color: #ff6b35;
+            margin-right: 15px;
+            margin-top: 4px;
+            font-size: 1.1rem;
+        }
+        
+        
+        .back-to-top {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background-color: #5a5a5a;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+     
+        
+        @media (max-width: 768px) {
+            .footer {
+                padding: 40px 0 30px;
+            }
+            
+            
+        }

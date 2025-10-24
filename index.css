@@ -1,40 +1,110 @@
 @charset "utf-8";
+
 :root {
   --dark: #2f2f2f;
   --accent: #ff7f2a;
   --muted: #9a9a9a;
   --maxw: 1100px;
 }
+
 * { box-sizing: border-box; }
+
 html, body {
   height: 100%;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: #333;
 }
+
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 30px; }
 
 /* NAVBAR */
-.topbar { background: #333; color: #fff; }
-.navwrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 22px 0;
+.topbar {
+    background: #333;
+    color: #fff;
+    position: relative;
+    z-index: 1000;
 }
-.logo { letter-spacing: 3px; font-weight: 600; }
-.mainnav a {
-  color: #ddd;
-  text-decoration: none;
-  margin-left: 22px;
-  font-size: 13px;
-  transition: color 0.3s;
-}
-.mainnav a:hover, .mainnav a.active { color: var(--accent); }
-.cart { margin-left: 12px; }
-.cartcount { color: var(--accent); margin-left: 6px; }
 
-/* CABEÇALHO */
+.navwrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+}
+
+.logo {
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Desktop menu */
+.mainnav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.mainnav a:hover,
+.mainnav a.active {
+    color: var(--accent);
+}
+
+/* Burger menu */
+.burger {
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.burger div {
+    height: 3px;
+    width: 100%;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .mainnav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .mainnav a {
+        margin: 10px 0;
+    }
+
+    .mainnav.active {
+        display: flex;
+    }
+}
+
+.burger.active div:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.burger.active div:nth-child(2) { opacity: 0; }
+.burger.active div:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+.mainnav.open { display: flex; flex-direction: column; gap: 15px; position: absolute; top: 60px; left: 0; width: 100%; background: #333; padding: 20px; }
+
+/* HERO */
 .hero {
   background: url('Imagens/pictures-of-pizza-23-1.jpg') center/cover no-repeat;
   height: 100vh;
@@ -52,237 +122,116 @@ html, body {
   width: 100%; height: 100%;
   background: rgba(0,0,0,0.4);
 }
-.overlay {
-  position: relative;
-  z-index: 2;
-}
-.hero h1 {
-  font-size: 300px;
-font-family: "Birthstone", cursive;
-  font-weight: 400px;
-  font-style: bold;
- padding-bottom: 10px;
- padding-top: 0px;
-}
-
-.hero h2 {
-  font-weight: 400;
-  margin-top: -10px;
-  font-size: 100px;
-}
-.hero p {
-  margin: 20px 0;
-  font-size: 50px;
-}
+.overlay { position: relative; z-index: 2; }
+.hero h1 { font-size: 80px; font-family: "Birthstone", cursive; margin: 0; }
+.hero p { font-size: 20px; margin: 20px 0; }
 .cta {
-  background: var(--accent);
-  border: none;
-  color: #fff;
-  padding: 30px 30px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 50px;
-  margin-top: 60px;
+  background: var(--accent); border: none; color: #fff; padding: 15px 30px;
+  font-weight: bold; cursor: pointer; border-radius: 10px; font-size: 18px;
 }
 
-/* SECÇÃO PROMO */
-.promo-section {
-  display: flex;
-  justify-content: center;
-  padding: 80px 0;
-}
-
-.promo-container {
-  display: flex;
-  max-width: 1100px;
-  gap: 40px;
-}
-.promo-images {
-  display: flex;
-}
-
-.promo-card {
-  color: #fff;
-  text-align: center;
-  padding: 50px;          
-  flex: 1 1 300px;        /* ensures each card grows and has a minimum width */
-  font-size: 1.2em;       /* optional: increase text size */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;              /* spacing between elements inside card */
-  border-radius: 8px;     /* optional: bigger rounded corners for bigger card */
-}
-
-
+/* PROMO */
+.promo-section { display: flex; justify-content: center; padding: 60px 0; flex-wrap: wrap; }
+.promo-card { color: #fff; text-align: center; padding: 20px; flex: 1 1 250px; display: flex; flex-direction: column; align-items: center; gap: 15px; border-radius: 8px; }
 .promo-card.orange { background: var(--accent); }
 .promo-card.gray { background: #333; }
-.promo-right h3 { font-size: 50px; font-weight: bold; }
-.promo-right a { color: var(--accent); text-decoration: none; text-align: justify; font-size: 50px; }
-.promo-right p { color: var(--dark); text-decoration: none;text-align: justify;font-size: 20px; }
+.promo-right {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* reduced spacing between elements */
+}
+
+.promo-right h3 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* smaller space below the title */
+    margin-top: 20px;
+  }
+
+.promo-right p {
+    color: var(--dark);
+    font-size: 20px;
+    text-align: justify;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.promo-right a {
+    color: var(--accent);
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}
 
 
-/* CATEGORIAS DE COMIDA */
+/* FOOD CATEGORIES */
 .food-categories {
-  display: flex;
-  text-align: center;
-  justify-content: center; /* center all cards horizontally */
-}
+    display: flex;
+    justify-content: center; /* center the cards */
+    text-align: center;
+    gap: 20px; /* spacing between cards */
+    margin-top: 10px; /* reduce top margin (was larger before) */
+    margin-left:90px;
+  }
 
+.category { width: 250px; }
 .category img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-.category h4 {
-  background: var(--accent);
-  color: #fff;
-  padding: 10px 0;
-  margin: 0;
+    width: 100%; /* responsive width */
+    max-width: 250px; /* optional: limit width for better layout */
+    height: auto;
+    object-fit: cover;
 }
 
-/* CHEFE RECOMENDA */
-.chef-recommends {
-  text-align: center;
-  padding: 60px 0;
+.category h4 {
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%; /* ensures title box width matches the image */
 }
-.recommend-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  padding: 030px 30px;
-}
-.dish {
-  position: relative;
-}
-.dish img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
+
+/* CHEF RECOMMENDS */
+.chef-recommends { text-align: center; padding: 50px 20px; }
+.recommend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.dish { position: relative; }
+.dish img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
 .tag {
   position: absolute;
+  top: 10px; left: 10px;
   background: var(--accent);
   color: #fff;
-  padding: 4px 8px;
-  font-size: 0.7em;
-  top: 10px;
-  left: 10px;
-}
-.price {
-  color: var(--accent);
+  padding: 5px 8px;
+  font-size: 0.8em;
   font-weight: bold;
-  margin-top: 5px;
+  border-radius: 4px;
 }
+.price { color: var(--accent); font-weight: bold; margin-top: 5px; }
 
-.chef-recommends h2 {
-    font-size: 70px;
-    font-weight: bold;
-}
-
-/* RESERVA ONLINE */
-.book-online {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff7f0;
-  padding: 60px 10%;
-}
-.book-content {
-  max-width: 500px;
-}
-.book-btn {
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 15px;
-}
-.book-img img {
-  width: 500px;
-  border-radius: 10px;
-}
-
+/* BOOK ONLINE */
+.book-online { display: flex; justify-content: space-between; flex-wrap: wrap; padding: 40px 10%; background: #fff7f0; gap: 20px; }
+.book-content { max-width: 500px; }
+.book-btn { background: var(--accent); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; margin-top: 15px; }
+.book-img img { width: 100%; max-width: 500px; border-radius: 10px; }
 
 /* FOOTER */
-        
-        .content-spacer {
-            flex: 1;
-        }
-        
-        .footer {
-            background-color: #3d3d3d;
-            color: #ffffff;
-            padding: 60px 0 30px;
-            position: relative;
-        }
-        
-        .footer h4 {
-            font-size: 1.75rem;
-            font-weight: 300;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
-        }
-        
-        .footer p, .footer a {
-            color: #e0e0e0;
-            font-size: 1rem;
-            line-height: 1.8;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            color: #ffffff;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-        
-        .contact-item i {
-            color: #ff6b35;
-            margin-right: 15px;
-            margin-top: 4px;
-            font-size: 1.1rem;
-        }
-        
-        .instagram-text {
-            color: #b0b0b0;
-            font-style: italic;
-        }
-        
-        .back-to-top {
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            background-color: #5a5a5a;
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-        }
-        
-     
-        
-        @media (max-width: 768px) {
-            .footer {
-                padding: 40px 0 30px;
-            }
-            
-            .footer h4 {
-                font-size: 1.5rem;
-                margin-bottom: 20px;
-            }
-            
-        }
+.footer { background-color: #3d3d3d; color: #ffffff; padding: 60px 30px; }
+.footer h4 { font-size: 1.75rem; font-weight: 300; margin-bottom: 25px; letter-spacing: 0.5px; }
+.footer p, .footer a { color: #e0e0e0; font-size: 1rem; text-decoration: none; }
+.footer a:hover { color: #ffffff; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .burger { display: flex; }
+  .mainnav { display: none; flex-direction: column; gap: 15px; }
+  .hero h1 { font-size: 50px; }
+  .hero p { font-size: 16px; }
+  .cta { font-size: 16px; padding: 10px 20px; }
+  .food-categories { flex-direction: column; gap: 20px; }
+  .recommend-grid { grid-template-columns: 1fr; }
+  .promo-section { flex-direction: column; }
+  .promo-card { width: 100%; }
+}
