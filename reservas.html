@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fioréto</title>
+<link href="reservas.css" rel="stylesheet"/> 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+<!-- NAVBAR -->
+  <header class="topbar">
+    <div class="container navwrap">
+        <div class="logo">FIORETTO</div>
+        <nav class="mainnav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">GALLERY</a>
+            <a href="#">BLOG</a>
+            <a class="active" href="#">CONTACTS</a>
+        </nav>
+    </div>
+  </header>
+
+<!-- MESAS DO RESTAURANTE -->
+<div class="header">
+        <h1>Reserva de Mesas</h1>
+    </div>
+
+    <div class="floor-plan">
+        <!-- FILA 1 -->
+        <div class="table-row">
+            <div class="table-container">
+                <div class="table square seats-4">
+                    <div class="table-number">1</div>
+                    <div class="chair top"></div>
+                    <div class="chair bottom"></div>
+                    <div class="chair left"></div>
+                    <div class="chair right"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table rectangular seats-6">
+                    <div class="table-number">2</div>
+                    <div class="chair top left"></div>
+                    <div class="chair top center"></div>
+                    <div class="chair top right"></div>
+                    <div class="chair bottom left"></div>
+                    <div class="chair bottom center"></div>
+                    <div class="chair bottom right"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table square seats-4">
+                    <div class="table-number">3</div>
+                    <div class="chair top"></div>
+                    <div class="chair bottom"></div>
+                    <div class="chair left"></div>
+                    <div class="chair right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILA2 2 -->
+        <div class="table-row">
+            <div class="table-container">
+                <div class="table square seats-2">
+                    <div class="table-number">4</div>
+                    <div class="chair left"></div>
+                    <div class="chair right"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table square seats-2">
+                    <div class="table-number">5</div>
+                    <div class="chair left"></div>
+                    <div class="chair right"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table rectangular seats-6">
+                    <div class="table-number">6</div>
+                    <div class="chair top left"></div>
+                    <div class="chair top center"></div>
+                    <div class="chair top right"></div>
+                    <div class="chair bottom left"></div>
+                    <div class="chair bottom center"></div>
+                    <div class="chair bottom right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILA 3 -->
+        <div class="table-row">
+            <div class="table-container">
+                <div class="table square seats-2">
+                    <div class="table-number">7</div>
+                    <div class="chair left"></div>
+                    <div class="chair right"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table square seats-2">
+                    <div class="table-number">8</div>
+                    <div class="chair left"></div>
+                    <div class="chair right"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table round seats-4">
+                    <div class="table-number">9</div>
+                    <div class="chair top-left"></div>
+                    <div class="chair top-right"></div>
+                    <div class="chair bottom-left"></div>
+                    <div class="chair bottom-right"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table round seats-4">
+                    <div class="table-number">10</div>
+                    <div class="chair top-left"></div>
+                    <div class="chair top-right"></div>
+                    <div class="chair bottom-left"></div>
+                    <div class="chair bottom-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- FORMULÁRIO DE RESERVA -->
+<div class="reservation-section">
+  <form class="reservation-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+    
+    <button type="submit" class="cta">Reservar</button>
+  </form>
+</div>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</footer>
+
+<footer class="site-footer"></footer>
+
+</body>
+</html>
