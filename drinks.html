@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fioretto</title>
+    <link href="style2.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="topbar">
+      <div class="container navwrap">
+        <div class="logo">FIORETTO</div>
+        <nav class="mainnav" id="mainnav">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="menu.html">MENU</a>
+          <a href="#">GALLERY</a>
+          <a href="#">BLOG</a>
+          <a class="active" href="#">CONTACTS</a>
+        </nav>
+
+        <!-- BOTÃO BURGER PARA MOBILE -->
+
+        <div class="burger" id="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("mainnav");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+
+    <!-- CABEÇALHO -->
+    <section class="hero5">
+      <div class="overlay">
+        <h1>BEBIDAS</h1>
+      </div>
+    </section>
+
+    <!--Separadores bebidas-->
+    <section class="drinks-section">
+      <div class="drinks-container">
+        <!-- Bebidas Frias -->
+        <div class="drink-box">
+          <h2>Bebidas Frias</h2>
+          <ul>
+            <li>Limonata<span class="drink-price">€2.50</span></li>
+            <li>Chinotto<span class="drink-price">€3</span></li>
+            <li>Caffè Shakerato<span class="drink-price">€3.50</span></li>
+            <li>Orzata<span class="drink-price">€4</span></li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-accent"
+            data-bs-toggle="modal"
+            data-bs-target="#modal1"
+          >
+            + Info
+          </button>
+        </div>
+
+        <!-- Separador / Photobooth 1 -->
+        <div class="separator">
+          <img src="affogatto.jpg" alt="Separador 1" />
+          <img src="aperol.jpg" alt="Separador 1" />
+        </div>
+
+        <!-- Bebidas Quentes -->
+        <div class="drink-box">
+          <h2>Bebidas Quentes</h2>
+          <ul>
+            <li>Caffè Espresso<span class="drink-price">€1.80</span></li>
+            <li>Cappuccino<span class="drink-price">€2.30</span></li>
+            <li>Caffè Latte<span class="drink-price">€2.10</span></li>
+            <li>Cioccolata Calda<span class="drink-price">€2.50</span></li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-accent"
+            data-bs-toggle="modal"
+            data-bs-target="#modal2"
+          >
+            + Info
+          </button>
+        </div>
+
+        <!-- Separador / Photobooth 2 -->
+        <div class="separator">
+          <img src="espresso.jpg" alt="Separador 2" />
+          <img src="Limonata.jpg" alt="Separador 2" />
+        </div>
+
+        <!-- Bebidas Alcoólicas -->
+        <div class="drink-box">
+          <h2>Bebidas Alcoólicas</h2>
+          <ul>
+            <li>Aperol Spritz<span class="drink-price">€7.00</span></li>
+            <li>Negroni<span class="drink-price">€6.50</span></li>
+            <li>Limoncello<span class="drink-price">€5.80</span></li>
+            <li>Vin Santo<span class="drink-price">€9.00</span></li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-accent"
+            data-bs-toggle="modal"
+            data-bs-target="#modal3"
+          >
+            + Info
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- MODAIS -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bebidas Frias</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Limonata – Limonada italiana artesanal, refrescante e cítrica.
+            </p>
+            <p>
+              Chinotto – Refrigerante italiano típico, feito com a fruta
+              chinotto, sabor amargo-doce.
+            </p>
+            <p>
+              Caffè Shakerato – Espresso gelado batido com gelo e açúcar,
+              servido frio.
+            </p>
+            <p>
+              Orzata – Bebida doce feita de cevada ou amêndoas, servida gelada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bebidas Quentes</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Caffè Espresso – Café forte e concentrado, base de praticamente
+              todos os cafés italianos.
+            </p>
+
+            <p>Cappuccino – Espresso com leite vaporizado e espuma cremosa.</p>
+
+            <p>
+              Caffè Latte – Espresso com bastante leite quente, menos espuma que
+              o cappuccino.
+            </p>
+
+            <p>
+              Cioccolata Calda – Chocolate quente italiano, geralmente bem
+              cremoso e espesso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bebidas Alcoólicas</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Aperol Spritz – Aperol, prosecco e água com gás, clássico
+              aperitivo italiano.
+            </p>
+
+            <p>
+              Negroni – Gin, Campari e vermute tinto, coquetel forte e
+              tradicional.
+            </p>
+
+            <p>
+              Limoncello – Licor de limão típico do sul da Itália, servido
+              gelado.
+            </p>
+
+            <p>
+              Vin Santo – Vinho de sobremesa italiano, normalmente servido com
+              cantucci (biscoitos).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Sobre Nós</h4>
+            <p>
+              Visite o nosso restaurante para experienciar a nossa atmosfera
+              relaxante, encontrar paz de espírito e desfrutar do nosso
+              diversificado e delicioso menu gourmet. A nossa vasta seleção de
+              acompanhamentos, pratos principais e aperitivos, bem como bebidas
+              sem álcool e alcoólicas, são feitos para satisfazer o seu paladar!
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Contacte-nos</h4>
+            <div class="contact-item">
+              <span>📍 Rua de Ciríaco Cardoso, 186, 4150-212 Porto</span>
+            </div>
+            <div class="contact-item">
+              <a href="tel:226195200">📞 226195200</a>
+            </div>
+            <div class="contact-item">
+              <span>🕐 Seg-Sex 11:00-00:00, Sáb-Dom 15:00-00:00</span>
+            </div>
+            <div class="contact-item">
+              <a href="mailto:fioreto@cesae.org">✉️ fioreto@cesae.org</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>SEGUE-NOS</h4>
+            <img
+              id="instagram"
+              src="Imagens/Imagem8.png"
+              alt="Instagram"
+              style="width: 100px"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,728 @@
+@charset "utf-8";
+
+:root {
+  --dark: #2f2f2f;
+  --accent: #ff7f2a;
+  --muted: #9a9a9a;
+  --maxw: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* NAVBAR */
+.topbar {
+  background: #333;
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.navwrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+}
+
+.logo {
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Desktop menu */
+.mainnav a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.mainnav a:hover,
+.mainnav a.active {
+  color: var(--accent);
+}
+
+/* Burger menu */
+.burger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.burger div {
+  height: 3px;
+  width: 100%;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .mainnav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .mainnav a {
+    margin: 10px 0;
+  }
+
+  .mainnav.active {
+    display: flex;
+  }
+}
+
+.burger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active div:nth-child(2) {
+  opacity: 0;
+}
+.burger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.mainnav.open {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #333;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  background: url("menuimage.jpg");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.overlay {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 80px;
+  font-family: "Birthstone", cursive;
+  margin: 0;
+}
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.cta {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* Menu Section */
+.menu-section {
+  padding: 60px 0;
+}
+
+.menu-grid {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.menu-column {
+  width: 48%;
+}
+
+.menu-item {
+  margin-bottom: 30px;
+}
+
+.menu-item h3 {
+  font-size: 15px;
+  color: #39748e;
+  font-weight: 400;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.menu-item h3 span {
+  position: absolute;
+  right: 0;
+  color: #5a6d7e;
+  font-weight: 700;
+}
+
+.menu-item p {
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* =====  Menu  ===== */
+.menu-dark {
+  background-color: #fae2b4;
+  color: #333; /* Corrigido para melhor contraste */
+  padding: 80px 0;
+}
+
+.menu-block {
+  width: 90%;
+  max-width: 1100px;
+  margin: 120px auto 80px;
+  text-align: center;
+}
+
+.menu-category {
+  font-size: 28px;
+  color: #eec37b;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+}
+
+.menu-category a {
+  color: #eec37b;
+}
+
+.menu-category a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.menu-content {
+  font-size: 28px;
+  color: #eec37b;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+}
+
+.menu-content a {
+  color: #ff2626;
+}
+
+.menu-content a:hover {
+  color: rgb(192, 71, 71);
+}
+
+.menu-dark > .menu-block:nth-of-type(odd) .menu-category {
+  text-align: right;
+}
+
+.menu-dark > .menu-block:nth-of-type(even) .menu-category {
+  text-align: left;
+}
+
+.menu-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.menu-dark > .menu-block:nth-of-type(even) .menu-content {
+  flex-direction: row-reverse;
+}
+
+.menu-image {
+  width: 40%;
+  border-radius: 70px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.menu-list {
+  list-style: none;
+  width: 50%;
+  text-align: left;
+  color: hsl(0, 61%, 52%);
+  font-size: 18px;
+}
+
+.menu-list li {
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #444;
+  padding-bottom: 10px;
+}
+
+.menu-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-desc {
+  color: #f3a047;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+  .menu-content,
+  .menu-content.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-list,
+  .menu-image {
+    width: 100%;
+  }
+
+  .menu-list {
+    text-align: center;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  padding: 60px 0 30px;
+  margin-top: 0px;
+}
+
+.footer h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.footer p,
+.footer a {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+#instagram {
+  width: 100px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+  .mainnav {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .cta {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    padding: 40px 0 20px;
+    margin-top: 60px;
+  }
+  .footer .col-lg-4 {
+    margin-bottom: 30px;
+  }
+  #instagram {
+    width: 80px;
+  }
+}
+
+/**CAROUSEL*/
+
+.split-carousel-section {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative; /* Adicionado: Essencial para Z-index */
+}
+
+.carousel-column {
+  flex: 1;
+  position: relative;
+  height: 400px;
+}
+
+/* Coluna de Imagem (Esquerda) */
+.image-column {
+  background-color: transparent;
+  /* O ID #imageCarousel é o elemento mais importante aqui */
+}
+
+/* 1. O Carrossel de Imagem (o pai) TEM de ser relativo */
+#imageCarousel {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* 2. O Item do Carrossel (o pai da imagem/overlay) TEM de ser relativo */
+#imageCarousel .carousel-item {
+  position: relative;
+  height: 100%;
+}
+
+/* 3. A Imagem deve preencher o item */
+#imageCarousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 5. OS CONTROLOS (AS SETAS) DEVEM TER O MAIOR Z-INDEX */
+.image-column .carousel-control-prev,
+.image-column .carousel-control-next {
+  z-index: 10; /* Garante que os botões ficam por cima do overlay */
+  width: 15%;
+  background: transparent;
+  opacity: 0.8;
+}
+
+.image-column .carousel-control-prev:hover,
+.image-column .carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Coluna de Texto (Direita) - Estilos mantidos para layout */
+.text-column {
+  background-color: #80b8c5;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#textCarousel {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-text-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #e38a4e;
+  margin-bottom: 15px;
+}
+
+.carousel-text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.carousel-text-content {
+  padding: 0 10px;
+  color: #4a4a4a;
+}
+
+.dish-line {
+  display: flex;
+  justify-content: space-between; /* pushes items to edges */
+  align-items: center;
+  margin-bottom: 10px;
+  color: beige;
+}
+
+.dish-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(229, 229, 139);
+}
+
+.dish-price {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--accent); /* optional highlight color */
+  color: white;
+}
+
+/*HERO STARTERS*/
+.hero2 {
+  background: url("SLIDE2.png") no-repeat center center;
+  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/*HERO MAIN COURSES*/
+.hero3 {
+  background: url("SLIDE3.png") no-repeat center center;
+  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/*HERO DESSERTS*/
+.hero4 {
+  background: url("SLIDE4.png") no-repeat center center;
+  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/*HERO DRINKS*/
+.hero5 {
+  background: url("SLIDE5.jpg") no-repeat center center;
+  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero2::before,
+.hero3::before,
+.hero4::before,
+.hero5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* overlay darkness */
+  z-index: 1; /* behind content */
+}
+
+.hero2 .overlay,
+.hero3 .overlay,
+.hero4 .overlay,
+.hero5 .overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.hero2 h1,
+.hero3 h1,
+.hero4 h1,
+.hero5 h1 {
+  font-family: "Birthstone", cursive;
+  font-size: 80px; /* adjust if needed */
+  margin: 0;
+}
+
+/*BEBIDAS*/
+
+.drinks-section {
+  background-color: #faedcf;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.drinks-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.drink-box {
+  flex: 1;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  position: relative;
+}
+
+.drink-box h2 {
+  font-family: "Birthstone", cursive;
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #e38a4e;
+  text-align: center;
+}
+
+.drink-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drink-box li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #4a4a4a;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drink-price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Separadores / photobooths */
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.separator img {
+  height: 300px;
+  width: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+  .drinks-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .separator img {
+    height: 250px;
+    margin: 20px 0;
+  }
+
+  .drink-box h2 {
+    font-size: 36px;
+  }
+
+  .drink-box li {
+    font-size: 16px;
+  }
+}
+
+.drinks-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.drink-box {
+  background-color: #fff;
+  flex: 1 1 220px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.drink-box h3 {
+  font-family: "Birthstone", cursive;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #e38a4e;
+}
+
+.drink-box p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-accent {
+  background-color: #ff7f2a;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-accent:hover {
+  background-color: #e76a1a;
+}

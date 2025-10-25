@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fioretto</title>
+    <link href="style2.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="topbar">
+      <div class="container navwrap">
+        <div class="logo">FIORETTO</div>
+        <nav class="mainnav" id="mainnav">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="menu.html">MENU</a>
+          <a href="#">GALLERY</a>
+          <a href="#">BLOG</a>
+          <a class="active" href="#">CONTACTS</a>
+        </nav>
+
+        <!-- BOTÃO BURGER PARA MOBILE -->
+
+        <div class="burger" id="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("mainnav");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+
+    <!-- CABEÇALHO -->
+   <section class="hero2">
+    <div class="overlay">
+      <h1>ENTRADAS</h1>
+    </div>
+  </section>
+  
+    <section class="split-carousel-section">
+      <div class="carousel-column image-column">
+<div id="imageCarousel" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="bruschettaaa.jpg" class="d-block w-100" alt="Starter 1" />
+              <div class="carousel-overlay"></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="caprese.jpg" class="d-block w-100" alt="Starter 2" />
+              <div class="carousel-overlay"></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="panza.png" class="d-block w-100" alt="Starter 3" />
+              <div class="carousel-overlay"></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="ceviche.jpg" class="d-block w-100" alt="Starter 4" />
+              <div class="carousel-overlay"></div>
+            </div>
+
+             <div class="carousel-item">
+              <img src="carne.png" class="d-block w-100" alt="Starter 4" />
+              <div class="carousel-overlay"></div>
+            </div>
+             </div>
+          
+
+<a
+  class="carousel-control-prev"
+  href="#imageCarousel"
+  role="button"
+  data-bs-slide="prev"
+>
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</a>
+
+<a
+  class="carousel-control-next"
+  href="#imageCarousel"
+  role="button"
+  data-bs-slide="next"
+>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</a>
+
+<a
+  class="carousel-control-next"
+  href="#imageCarousel"
+  role="button"
+  data-bs-slide="next"
+>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</a>
+
+        </div>
+      </div>
+
+ <div class="carousel-column text-column">
+<div id="textCarousel" class="carousel slide" data-bs-interval="false">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="carousel-text-content">
+        <div class="dish-line">
+          <span class="dish-name">Bruschetta al Pomodoro</span>
+          <span class="dish-price">€6</span>
+        </div>
+        <p>Fatias de pão italiano torrado, esfregadas com alho, cobertas com tomate fresco picado, manjericão e um fio de azeite extra-virgem.</p>
+
+        <div class="dish-line">
+          <span class="dish-name">Pão de Alho</span>
+          <span class="dish-price">€5</span>
+        </div>
+        <p>Pão italiano torrado, esfregado com alho e um toque de azeite extra-virgem.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="carousel-text-content">
+        <div class="dish-line">
+          <span class="dish-name">Caprese com Mozzarella</span>
+          <span class="dish-price">€7</span>
+        </div>
+        <p>Fatias de tomate fresco com mozzarella de búfala, manjericão e um fio de azeite extra-virgem.</p>
+
+        <div class="dish-line">
+          <span class="dish-name">Arancini de Queijo</span>
+          <span class="dish-price">€7</span>
+        </div>
+        <p>Bolinhos de arroz recheados com queijo derretido, empanados e fritos até ficarem dourados e crocantes.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 (se houver mais pratos) -->
+    <div class="carousel-item">
+      <div class="carousel-text-content">
+        <div class="dish-line">
+          <span class="dish-name">Salada Caprese</span>
+          <span class="dish-price">€6</span>
+        </div>
+        <p>Tomate fresco, mozzarella de búfala, manjericão e azeite extra-virgem.</p>
+
+        <div class="dish-line">
+          <span class="dish-name">Salada Panzanella</span>
+          <span class="dish-price">€6</span>
+        </div>
+        <p>Pão italiano tostado, tomate, pepino, cebola roxa, manjericão e vinagre balsâmico.</p>
+      </div>
+    </div>
+
+      <!-- Slide 4 (se houver mais pratos) -->
+    <div class="carousel-item">
+      <div class="carousel-text-content">
+        <div class="dish-line">
+          <span class="dish-name">Ceviche di Mare</span>
+          <span class="dish-price">€8</span>
+        </div>
+        <p>Camarões, lulas e mexilhões marinados em limão, azeite e ervas frescas.</p>
+
+        <div class="dish-line">
+          <span class="dish-name">Cozze alla Marinara</span>
+          <span class="dish-price">€8</span>
+        </div>
+        <p>Mexilhões cozidos com tomate, alho, vinho branco e salsa.</p>
+      </div>
+    </div>
+
+   <div class="carousel-item">
+      <div class="carousel-text-content">
+        <div class="dish-line">
+          <span class="dish-name">Carpaccio di Manzo</span>
+          <span class="dish-price">€9</span>
+        </div>
+        <p>Fatias finas de carne de vaca crua, temperadas com azeite, limão, parmesão e rúcula.</p>
+
+        <div class="dish-line">
+          <span class="dish-name">Prosciutto e Melone</span>
+          <span class="dish-price">€9</span>
+        </div>
+        <p>Presunto cru italiano servido com fatias de melão fresco, combinação clássica doce-salgada.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script>
+const imageCarousel = document.querySelector('#imageCarousel');
+const textCarousel = document.querySelector('#textCarousel');
+
+imageCarousel.addEventListener('slide.bs.carousel', function (e) {
+  const nextIndex = e.to;
+  const textItems = textCarousel.querySelectorAll('.carousel-item');
+  textItems.forEach((item, i) => item.classList.remove('active'));
+  textItems[nextIndex].classList.add('active');
+});
+    </script>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Sobre Nós</h4>
+            <p>
+              Visite o nosso restaurante para experienciar a nossa atmosfera
+              relaxante, encontrar paz de espírito e desfrutar do nosso
+              diversificado e delicioso menu gourmet. A nossa vasta seleção de
+              acompanhamentos, pratos principais e aperitivos, bem como bebidas
+              sem álcool e alcoólicas, são feitos para satisfazer o seu paladar!
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Contacte-nos</h4>
+            <div class="contact-item">
+              <span>📍 Rua de Ciríaco Cardoso, 186, 4150-212 Porto</span>
+            </div>
+            <div class="contact-item">
+              <a href="tel:226195200">📞 226195200</a>
+            </div>
+            <div class="contact-item">
+              <span>🕐 Seg-Sex 11:00-00:00, Sáb-Dom 15:00-00:00</span>
+            </div>
+            <div class="contact-item">
+              <a href="mailto:fioreto@cesae.org">✉️ fioreto@cesae.org</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>SEGUE-NOS</h4>
+            <img
+              id="instagram"
+              src="Imagens/Imagem8.png"
+              alt="Instagram"
+              style="width: 100px"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

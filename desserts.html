@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fioretto</title>
+    <link href="style2.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="topbar">
+      <div class="container navwrap">
+        <div class="logo">FIORETTO</div>
+        <nav class="mainnav" id="mainnav">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="menu.html">MENU</a>
+          <a href="#">GALLERY</a>
+          <a href="#">BLOG</a>
+          <a class="active" href="#">CONTACTS</a>
+        </nav>
+
+        <!-- BOTÃO BURGER PARA MOBILE -->
+
+        <div class="burger" id="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("mainnav");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+
+    <!-- CABEÇALHO -->
+  <section class="hero4">
+  <div class="overlay">
+    <h1>SOBREMESAS</h1>
+  </div>
+</section>
+     
+      </div>
+    </section>
+    <section class="split-carousel-section">
+      <div class="carousel-column image-column">
+<div id="imageCarousel" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="tiramissu.png" class="d-block w-100" alt="Starter 1" />
+              <div class="carousel-overlay"></div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="straci.jpg" class="d-block w-100" alt="Starter 2" />
+              <div class="carousel-overlay"></div>
+            </div>
+
+          </div>
+
+<a
+  class="carousel-control-prev"
+  href="#imageCarousel"
+  role="button"
+  data-bs-slide="prev"
+>
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</a>
+
+<a
+  class="carousel-control-next"
+  href="#imageCarousel"
+  role="button"
+  data-bs-slide="next"
+>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</a>
+
+<a
+  class="carousel-control-next"
+  href="#imageCarousel"
+  role="button"
+  data-bs-slide="next"
+>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</a>
+
+        </div>
+      </div>
+
+ <div class="carousel-column text-column">
+<div id="textCarousel" class="carousel slide" data-bs-interval="false">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="carousel-text-content">
+        <div class="dish-line">
+          <span class="dish-name">Tiramisù</span>
+          <span class="dish-price">€5</span>
+        </div>
+        <p>Camadas de biscoitos embebidos em café, mascarpone e cacau polvilhado por cima.</p>
+
+        <div class="dish-line">
+          <span class="dish-name">Panna Cotta</span>
+          <span class="dish-price">€5</span>
+        </div>
+        <p>Doce cremoso feito com natas e gelatina, normalmente servido com coulis de frutas vermelhas.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="carousel-text-content">
+        <div class="dish-line">
+          <span class="dish-name">Gelato de Stracciatella</span>
+          <span class="dish-price">€4</span>
+        </div>
+        <p>Gelado de creme com pedaços finos de chocolate.</p>
+
+        <div class="dish-line">
+          <span class="dish-name">Gelato de Pistacchio</span>
+          <span class="dish-price">€4</span>
+        </div>
+        <p>Gelado cremoso de pistáchio, super típico na Sicília.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script>
+const imageCarousel = document.querySelector('#imageCarousel');
+const textCarousel = document.querySelector('#textCarousel');
+
+imageCarousel.addEventListener('slide.bs.carousel', function (e) {
+  const nextIndex = e.to;
+  const textItems = textCarousel.querySelectorAll('.carousel-item');
+  textItems.forEach((item, i) => item.classList.remove('active'));
+  textItems[nextIndex].classList.add('active');
+});
+    </script>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Sobre Nós</h4>
+            <p>
+              Visite o nosso restaurante para experienciar a nossa atmosfera
+              relaxante, encontrar paz de espírito e desfrutar do nosso
+              diversificado e delicioso menu gourmet. A nossa vasta seleção de
+              acompanhamentos, pratos principais e aperitivos, bem como bebidas
+              sem álcool e alcoólicas, são feitos para satisfazer o seu paladar!
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Contacte-nos</h4>
+            <div class="contact-item">
+              <span>📍 Rua de Ciríaco Cardoso, 186, 4150-212 Porto</span>
+            </div>
+            <div class="contact-item">
+              <a href="tel:226195200">📞 226195200</a>
+            </div>
+            <div class="contact-item">
+              <span>🕐 Seg-Sex 11:00-00:00, Sáb-Dom 15:00-00:00</span>
+            </div>
+            <div class="contact-item">
+              <a href="mailto:fioreto@cesae.org">✉️ fioreto@cesae.org</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>SEGUE-NOS</h4>
+            <img
+              id="instagram"
+              src="Imagens/Imagem8.png"
+              alt="Instagram"
+              style="width: 100px"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
