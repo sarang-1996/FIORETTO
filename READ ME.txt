@@ -1,1 +1,28 @@
-OLÁ
+# Projeto de Website: Restaurante Floretto
+
+Este projeto consiste no desenvolvimento de um website para o restaurante "Floretto", realizado em grupo pelos estudantes Sara, Diogo e Catarina. O objetivo principal foi criar um website funcional, moderno e responsivo, que apresente as diferentes secções do restaurante de forma clara e atrativa.
+
+---//----
+
+## Equipa e Divisão de Tarefas
+
+O trabalho foi dividido entre os três membros da equipa da seguinte forma:
+
+- A Catarina ficou responsável pela Página Inicial e pela secção de Reservas. A Página Inicial apresenta o restaurante, a sua identidade e novidades, enquanto a secção de Reservas permite aos utilizadores efetuar reservas online de forma simples e intuitiva.  
+- A Sara ficou responsável pela secção Menu, onde são apresentados todos os pratos e bebidas disponíveis no restaurante, com organização clara e visual apelativo.  
+- O Diogo ficou responsável pelas secções Contactos e Galeria. Na secção de Contactos encontram-se as informações de contacto do restaurante, incluindo morada, telefone e email, enquanto a Galeria apresenta fotografias do espaço e dos pratos, ajudando a transmitir a atmosfera do restaurante aos visitantes do website.
+
+----//--------
+
+## Tecnologias Utilizadas
+
+O website foi construído utilizando as seguintes tecnologias:
+
+- HTML5, para a estrutura de todas as páginas.
+- CSS, para a estilização e layout visual do website.
+- JavaScript, para funcionalidades interativas, como o menu hamburger.
+- Bootstrap, para facilitar o design responsivo (uso de carrousel por exemplo) e garantir compatibilidade com dispositivos móveis e desktops.
+
+-------- // ----------
+
+Executamos os ficheiros HTML no Google Chrome.
