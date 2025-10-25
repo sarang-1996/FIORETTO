@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fioréto</title>
+    <title>Fioretto</title>
 <link href="reservas.css" rel="stylesheet"/> 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
+
 <!-- NAVBAR -->
-  <header class="topbar">
-    <div class="container navwrap">
-        <div class="logo">FIORÉTO</div>
-        <nav class="mainnav">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">GALLERY</a>
-            <a href="#">BLOG</a>
-            <a class="active" href="#">CONTACTS</a>
-        </nav>
+    <header class="topbar">
+        <div class="navwrap">
+            <div class="logo">FIORETTO</div>
+            <nav class="mainnav" id="mainnav">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">GALLERY</a>
+                <a href="#">BLOG</a>
+                <a class="active" href="#">CONTACTS</a>
+            </nav>
+
+            <!-- BOTÃO BURGER PARA MOBILE -->
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MESAS DO RESTAURANTE -->
+    <div class="header">
+        <h1>Reserva de Mesas</h1>
     </div>
-  </header>
 
-<!-- MESAS DO RESTAURANTE -->
-<div class="header">
-    <h1>Reserva de Mesas</h1>
-</div>
+    <p id="textomesas">
+        O Restaurante Fioretto é o local ideal para qualquer ocasião gastronómica!<br>
+        Seja um almoço de negócios, um jantar de aniversário em família, um jantar romântico para um pedido de casamento ou qualquer outro evento... Garantimos que o ambiente e os pratos estão à altura!
+    </p>
 
-<p id="textomesas">
-    O Restaurante Fioréto é o local ideal para qualquer ocasião gastronómica!<br>
-    Seja um almoço de negócios, um jantar de aniversário em família, um jantar romântico para um pedido de casamento ou qualquer outro evento... Garantimos que o ambiente e os pratos estão à altura!
-</p>
     <div class="floor-plan">
         <!-- FILA 1 -->
         <div class="table-row">
@@ -153,16 +162,12 @@
 
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="bookingDate">
-                        📅 Data da Reserva
-                    </label>
+                    <label for="bookingDate">📅 Data da Reserva</label>
                     <input type="date" id="bookingDate" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="bookingTime">
-                        🕐 Horário
-                    </label>
+                    <label for="bookingTime">🕐 Horário</label>
                     <select id="bookingTime" required>
                         <option value="">Selecione um horário</option>
                         <option value="12:00">12:00</option>
@@ -209,10 +214,19 @@
     </div>
 
     <script>
+        // Burger menu toggle
+        const burger = document.getElementById('burger');
+        const mainnav = document.getElementById('mainnav');
+
+        burger.addEventListener('click', () => {
+            mainnav.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Booking functionality
         let selectedTableId = null;
         let selectedSeats = null;
 
-        // Set minimum date to today
         document.addEventListener('DOMContentLoaded', function() {
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('bookingDate').setAttribute('min', today);
@@ -229,7 +243,6 @@
 
         function closeModal() {
             document.getElementById('bookingModal').style.display = 'none';
-            // Reset form
             document.getElementById('bookingDate').value = '';
             document.getElementById('bookingTime').value = '';
             document.getElementById('customerName').value = '';
@@ -273,7 +286,6 @@
             closeModal();
         }
 
-        // Close modal when clicking outside
         window.onclick = function(event) {
             const modal = document.getElementById('bookingModal');
             if (event.target === modal) {
@@ -282,51 +294,41 @@
         }
     </script>
 
-  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-<!-- FOOTER -->
-
+    <!-- FOOTER -->
 <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- SOBRE NÓS -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h4>Sobre Nós</h4>
-                    <p>Visite o nosso restaurante para experienciar a nossa atmosfera relaxante, encontrar paz de espírito e desfrutar do nosso diversificado e delicioso menu gourmet. A nossa vasta seleção de acompanhamentos, pratos principais e aperitivos, bem como bebidas sem álcool e alcoólicas, são feitos para satisfazer o seu paladar!</p>
-                </div>
-                
-                <!-- CONTACTE-NOS -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h4>Contacte-nos</h4>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Rua de Ciríaco Cardoso, 186, 4150-212 Porto</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:7033290632">226195200</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Seg-Sex 11:00-00:00, Sáb-Sáb 15:00-00:00</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@demolink.org">fioreto@cesae.org</a>
-                    </div>
-                </div>
-                
-                <!-- REDES SOCIAIS -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <h4>SEGUE-NOS</h4>
-                  <img id="instagram" src="Imagens/Imagem8.png" alt="" class="transparent" style="width: 100px;">
-                </div>
-            </div>
-        </div>
-        
-       
-    </footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+              <h4>Sobre Nós</h4>
+              <p>Visite o nosso restaurante para experienciar a nossa atmosfera relaxante, encontrar paz de espírito e desfrutar do nosso diversificado e delicioso menu gourmet. A nossa vasta seleção de acompanhamentos, pratos principais e aperitivos, bem como bebidas sem álcool e alcoólicas, são feitos para satisfazer o seu paladar!</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <h4>Contacte-nos</h4>
+              <div class="contact-item">
+                  <span>📍 Rua de Ciríaco Cardoso, 186, 4150-212 Porto</span>
+              </div>
+              <div class="contact-item">
+                  <a href="tel:226195200">📞 226195200</a>
+              </div>
+              <div class="contact-item">
+                  <span>🕐 Seg-Sex 11:00-00:00, Sáb-Dom 15:00-00:00</span>
+              </div>
+              <div class="contact-item">
+                  <a href="mailto:fioreto@cesae.org">✉️ fioreto@cesae.org</a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+              <h4>SEGUE-NOS</h4>
+              <img id="instagram" src="Imagens/Imagem8.png" alt="Instagram" style="width: 100px;">
+          </div>
+      </div>
+  </div>
+</footer>
 
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
