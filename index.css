@@ -40,7 +40,7 @@ html, body {
     font-size: 24px;
 }
 
-/* Desktop menu */
+/* MENU DESKTOP */
 .mainnav a {
     color: #ddd;
     text-decoration: none;
@@ -54,9 +54,9 @@ html, body {
     color: var(--accent);
 }
 
-/* Burger menu */
+/* MENU BURGER */
 .burger {
-    display: none; /* hidden on desktop */
+    display: none; /* escondido no desktop */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -71,7 +71,7 @@ html, body {
     border-radius: 2px;
 }
 
-/* Mobile styles */
+/* Responsividade Mobile */
 @media (max-width: 768px) {
     .burger {
         display: flex;
@@ -104,7 +104,7 @@ html, body {
 .burger.active div:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 .mainnav.open { display: flex; flex-direction: column; gap: 15px; position: absolute; top: 60px; left: 0; width: 100%; background: #333; padding: 20px; }
 
-/* HERO */
+/* CABEÇALHO */
 .hero {
   background: url('Imagens/pictures-of-pizza-23-1.jpg') center/cover no-repeat;
   height: 100vh;
@@ -130,7 +130,7 @@ html, body {
   font-weight: bold; cursor: pointer; border-radius: 10px; font-size: 18px;
 }
 
-/* PROMO */
+/* SECÇÃO PROMO */
 .promo-section { display: flex; justify-content: center; padding: 60px 0; flex-wrap: wrap; }
 .promo-card { color: #fff; text-align: center; padding: 20px; flex: 1 1 250px; display: flex; flex-direction: column; align-items: center; gap: 15px; border-radius: 8px; }
 .promo-card.orange { background: var(--accent); }
@@ -168,7 +168,7 @@ html, body {
 }
 
 
-/* FOOD CATEGORIES */
+/* SECÇÃO CATEGORIAS DE COMIDA */
 .food-categories {
     display: flex;
     justify-content: center; /* center the cards */
@@ -194,7 +194,7 @@ html, body {
     width: 100%; /* ensures title box width matches the image */
 }
 
-/* CHEF RECOMMENDS */
+/* SECÇÃO O CHEFE RECOMENDA */
 .chef-recommends { text-align: center; padding: 50px 20px; }
 .recommend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
 .dish { position: relative; }
@@ -211,7 +211,7 @@ html, body {
 }
 .price { color: var(--accent); font-weight: bold; margin-top: 5px; }
 
-/* BOOK ONLINE */
+/* RESERVAS ONLINE */
 .book-online { display: flex; justify-content: space-between; flex-wrap: wrap; padding: 40px 10%; background: #fff7f0; gap: 20px; }
 .book-content { max-width: 500px; }
 .book-btn { background: var(--accent); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; margin-top: 15px; }
@@ -253,10 +253,8 @@ html, body {
             width: 100px;
         }
 
-        /* RESPONSIVE */
+        /* RESPONSIVIDADE GERAL */
         @media (max-width: 768px) {
-          .burger { display: flex; }
-          .mainnav { display: none; flex-direction: column; gap: 15px; }
           .hero h1 { font-size: 50px; }
           .hero p { font-size: 16px; }
           .cta { font-size: 16px; padding: 10px 20px; }
