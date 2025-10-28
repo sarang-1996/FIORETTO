@@ -1,76 +1,179 @@
-<!-- FILE: index.html -->
-<!doctype html>
-<html lang="pt">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contacts — Mia Ittalonni</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fioretto</title>
+    <link href="index.css" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-
 <body>
-    <header class="topbar">
-        <div class="container navwrap">
-            <div class="logo">FIORETTO</div>
-            <nav class="mainnav">
-                <a href="#">HOME</a>
-                <a href="#">MENU</a>
-                <a href="#">GALERIA</a>
-                <a href="#">RESERVAS</a>
-                <a class="active" href="#">CONTACTOS</a>
-            </nav>
-        </div>
-    </header>
 
+<!-- NAVBAR -->
+<header class="topbar">
+    <div class="container navwrap">
+        <div class="logo">FIORETTO</div>
+        <nav class="mainnav" id="mainnav">
+            <a href="index copy.html">HOME</a>
+            <a href="#">ABOUT</a>
+             <a href="menu.html">MENU</a>
+            <a href="#">GALLERY</a>
+            <a href="#">BLOG</a>
+            <a class="active" href="#">CONTACTS</a>
+        </nav>
 
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="#">Home</a>
-            <span>/</span>
-            <span class="muted">Contactos</span>
+   <!-- BOTÃO BURGER PARA MOBILE -->
+
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
+</header>
 
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('mainnav');
 
-    <main>
-        <section class="contact-hero">
-            <div class="container columns">
-                <div class="col contact">
-                    <h1>Fala Connosco</h1>
-                    <p class="address">Rua Ciríaco Cardoso, 186 <br>4150-212 Porto</p>
-                    <p class="tel">TEL: <a href="tel:15558366767">917846838</a><br>
-                        <a href="mailto:info@demolink.org">fioretto@reservas.pt</a>
-                    </p>
-                </div>
+  burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+  });
+</script>
 
+<!-- CABEÇALHO -->
+<section class="hero">
+    <div class="overlay">
+      <h1>Pizza que te enche a alma</h1>
+      <p>Fazemos pizzas tão boas que se derretem na tua boca!<br>Reserve online ou ligue para o 914568473</p>
+      <a href="reservas.html"><button class="cta">Faça uma reserva</button></a>
+    </div>
+</section>
 
-                <div class="col hours">
-                    <h1>Horário de Funcionamento</h1>
-                    <p>Segunda-Sexta 11:00-00:00<br> Fins de Semana 15:00-00:00</p>
-                </div>
-            </div>
-        </section>
+<!-- SECÇÃO PROMO -->
+<section class="promo-section">
+    <div class="promo-container">
+      <div class="promo-left">
+        <div class="promo-images">
+          <div class="promo-card orange">
+            <p class="card-title">especialidade pizza</p>
+            <img src="Imagens/imagemPizza.jpg" alt="Pizza" class="card-figure">
+            <h2>APENAS 13.99€</h2>
+          </div>
 
+          <div class="promo-card gray">
+            <p class="card-title">Todas as segundas</p>
+            <img src="Imagens/imagemPizza2.jpg" alt="Desconto" class="card-figure">
+            <h2>-15% de desconto</h2>
+          </div>
+        </div>
+      </div>
+      <div class="promo-right">
+        <h3>Chef do Fioretto</h3>
+        <p>Natural da cidade italiana de Nápoles, Simon é um dos melhores pizzaiolos de Portugal. Quer uma prova disso?</p>
+        <p>Na verdade, as pessoas vêm de cidades vizinhas só para experimentar uma fatia da sua pizza Marinara!</p>
+      </div>
+    </div>
+</section>
 
-        <!-- MAP SECTION - replace background-image in styles.css .map if you prefer an iframe. -->
-        <section class="map">
-            <!-- Option A: Use background image set in CSS (recommended for exact look)
-Option B: Replace the <div> below with an <iframe> embed from Google Maps if you want an interactive map. -->
-            <div class="map-inner">
-                <!-- placeholder - leave empty, map handled by CSS background or replace with iframe -->
-            </div>
-        </section>
-    </main>
+<!-- CATEGORIAS DE COMIDA -->
+<section class="food-categories">
+    <div class="category drinks">
+      <a href="drinks.html">
+      <img src="Imagens/Wine.jpg" alt="Bebidas" />
+      </a>
+      <h4>BEBIDAS</h4>
+    </div>
+    <div class="category main">
+      <a href="maincourses.html">
+      <img src="Imagens/order_online.jpg" alt="Pratos Principais" />
+      </a>
+      <h4>PRATOS PRINCIPAIS</h4>
+    </div>
+    <div class="category starters">
+      <a href="desserts.html">
+      <img src="Imagens/Starters.webp" alt="Entradas" />
+      </a>
+      <h4>ENTRADAS</h4>
+    </div>
+</section>
 
+<!-- O CHEFE RECOMENDA -->
+<section class="chef-recommends">
+  <h2>O Chefe Recomenda</h2>
+  <div class="recommend-grid">
+    <div class="dish">
+      <img src="Imagens/capricciosa-pizza-1.jpg" alt="Capricciosa" />
+      <span class="tag">ESPECIAL DO CHEFE</span>
+      <h4>CAPRICCIOSA</h4>
+      <div class="price">18€</div>
+    </div>
+    <div class="dish">
+      <img src="Imagens/marinara.jpg" alt="Marinara" />
+      <span class="tag">ESPECIAL DO CHEFE</span>
+      <h4>MARINARA</h4>
+      <div class="price">23€</div>
+    </div>
+    <div class="dish">
+      <img src="Imagens/crudo_parma.jpg" alt="Crudo de Parma" />
+      <span class="tag">ESPECIAL DO CHEFE</span>
+      <h4>CRUDO DE PARMA</h4>
+      <div class="price">24€</div>
+    </div>
+    <div class="dish">
+      <img src="Imagens/americano.jpg" alt="Americana" />
+      <span class="tag">ESPECIAL DO CHEFE</span>
+      <h4>AMERICANA</h4>
+      <div class="price">35€</div>
+    </div>
+  </div>
+</section>
 
-    <footer class="site-footer">
-        <div class="container">&copy; 2025 Fioretto</div>
-    </footer>
+<!-- RESERVA ONLINE -->
+<section class="book-online">
+  <div class="book-content">
+    <h3>Faça o seu pedido! RESERVE ONLINE!</h3>
+    <p>Cada pessoa que reservar mesa para esta sexta-feira à noite terá 10% de desconto em todos os itens do menu, incluindo bebidas sem álcool e alcoólicas!</p>
+    <a href="reservas.html"><button class="book-btn">RESERVE JÁ</button></a>
+  </div>
+  <div class="book-img">
+    <img src="Imagens/order_online.jpg" alt="Book Online Pizza" />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+              <h4>Sobre Nós</h4>
+              <p>Visite o nosso restaurante para experienciar a nossa atmosfera relaxante, encontrar paz de espírito e desfrutar do nosso diversificado e delicioso menu gourmet. A nossa vasta seleção de acompanhamentos, pratos principais e aperitivos, bem como bebidas sem álcool e alcoólicas, são feitos para satisfazer o seu paladar!</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <h4>Contacte-nos</h4>
+              <div class="contact-item">
+                  <span>📍 Rua de Ciríaco Cardoso, 186, 4150-212 Porto</span>
+              </div>
+              <div class="contact-item">
+                  <a href="tel:226195200">📞 226195200</a>
+              </div>
+              <div class="contact-item">
+                  <span>🕐 Seg-Sex 11:00-00:00, Sáb-Dom 15:00-00:00</span>
+              </div>
+              <div class="contact-item">
+                  <a href="mailto:fioreto@cesae.org">✉️ fioreto@cesae.org</a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+              <h4>SEGUE-NOS</h4>
+              <img id="instagram" src="Imagens/Imagem8.png" alt="Instagram" style="width: 100px;">
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
