@@ -194,7 +194,7 @@ html, body {
 .hero p { font-size: 20px; margin: 20px 0; }
 .cta {
   background: var(--accent); border: none; color: #fff; padding: 15px 30px;
-  font-weight: bold; cursor: pointer; border-radius: 10px; font-size: 18px;
+  font-weight: bold; cursor: pointer; border-radius: 10px; font-size: 18px; margin-top: 30px;
 }
 
 /* SECÇÃO PROMO */
@@ -302,10 +302,9 @@ blockquote {
     justify-content: center; /* centrar os cartões */
     text-align: center;
     gap: 20px; /*espaçamento entre cards */
-    margin-top: 0px;
+    margin-top: 50px;
     margin-left:90px;
     margin-bottom: 50px;
- margin-top: 5px !important;
   }
 
 .category { width: 250px; }
@@ -388,7 +387,6 @@ blockquote {
           .hero h1 { font-size: 50px; }
           .hero p { font-size: 16px; }
           .cta { font-size: 16px; padding: 10px 20px; }
-          .food-categories { flex-direction: column; gap: 20px; margin-left: 0; align-items: center; }
           .recommend-grid { grid-template-columns: 1fr; }
          
           .book-online { flex-direction: column; align-items: center; }
@@ -414,7 +412,18 @@ blockquote {
 
   .promo-right {
     margin-top: 0;
+    margin-bottom: 0;
   }      
+
+  .food-categories {
+        /* Adjusts the existing rule to reduce top margin */
+        margin-top: 0px; 
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 0;
+        align-items: center;
+    }
+
 }
 
    @media (max-width: 900px) {

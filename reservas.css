@@ -201,19 +201,8 @@
             padding: 0% 0;
         }
 
-        #textomesas {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(16px, 2.5vw, 20px);
-            text-align: center;
-            max-width: 800px;
-            margin: 0% auto 80px auto;
-            line-height: 1.8;
-            color: #444;
-            padding: 0 20px 50px;
-        }
 
         .floor-plan {
-            background: #fae2b4;
             padding: 60px 20px 40px;
             max-width: 1400px;
             margin: 0 auto;
@@ -598,11 +587,6 @@
                 font-size: 50px;
             }
 
-            #textomesas {
-                font-size: 16px;
-                margin: 30px auto 40px;
-                padding: 0 15px 30px;
-            }
 
             .floor-plan {
                 padding: 30px 10px 20px;
@@ -646,9 +630,6 @@
                 font-size: 36px;
             }
 
-            #textomesas {
-                font-size: 15px;
-            }
 
             .table.rectangular {
                 width: 220px;
