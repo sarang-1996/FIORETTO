@@ -62,7 +62,7 @@ body {
 
 /* Burger menu */
 .burger {
-  display: none; /* hidden on desktop */
+  display: none; 
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -129,7 +129,7 @@ body {
 /* HERO */
 .hero {
   background: url("Imagens/menuimage.jpg") no-repeat center center;
-  background-size: cover; /* garante que cobre toda a tela sem repetir */
+  background-size: cover; 
   height: 100vh;
   display: flex;
   align-items: center;
@@ -216,10 +216,10 @@ body {
   color: #bbb;
 }
 
-/* =====  Menu  ===== */
+
 .menu-dark {
   background-color: #fae2b4;
-  color: #333; /* Corrigido para melhor contraste */
+  color: #333; 
   padding: 80px 0;
 }
 
@@ -410,7 +410,7 @@ body {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
-  position: relative; /* Adicionado: Essencial para Z-index */
+  position: relative; 
 }
 
 .carousel-column {
@@ -419,36 +419,36 @@ body {
   height: 400px;
 }
 
-/* Coluna de Imagem (Esquerda) */
+
 .image-column {
   background-color: transparent;
-  /* O ID #imageCarousel é o elemento mais importante aqui */
+ 
 }
 
-/* 1. O Carrossel de Imagem (o pai) TEM de ser relativo */
+
 #imageCarousel {
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-/* 2. O Item do Carrossel (o pai da imagem/overlay) TEM de ser relativo */
+
 #imageCarousel .carousel-item {
   position: relative;
   height: 100%;
 }
 
-/* 3. A Imagem deve preencher o item */
+
 #imageCarousel .carousel-item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-/* 5. OS CONTROLOS (AS SETAS) DEVEM TER O MAIOR Z-INDEX */
+
 .image-column .carousel-control-prev,
 .image-column .carousel-control-next {
-  z-index: 10; /* Garante que os botões ficam por cima do overlay */
+  z-index: 10;
   width: 15%;
   background: transparent;
   opacity: 0.8;
@@ -459,7 +459,7 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* Coluna de Texto (Direita) - Estilos mantidos para layout */
+
 .text-column {
   background-color: #80b8c5;
   padding: 30px;
@@ -492,7 +492,7 @@ body {
 
 .dish-line {
   display: flex;
-  justify-content: space-between; /* pushes items to edges */
+  justify-content: space-between; 
   align-items: center;
   margin-bottom: 10px;
   color: beige;
@@ -507,14 +507,14 @@ body {
 .dish-price {
   font-weight: 700;
   font-size: 16px;
-  color: var(--accent); /* optional highlight color */
+  color: var(--accent); 
   color: white;
 }
 
 /*HERO STARTERS*/
 .hero2 {
   background: url("Quadros/SLIDE2.png") no-repeat center center;
-  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  background-size: cover; 
   height: 70vh;
   display: flex;
   align-items: center;
@@ -527,7 +527,7 @@ body {
 /*HERO MAIN COURSES*/
 .hero3 {
   background: url("Quadros/SLIDE3.png") no-repeat center center;
-  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  background-size: cover; 
   height: 70vh;
   display: flex;
   align-items: center;
@@ -540,7 +540,7 @@ body {
 /*HERO DESSERTS*/
 .hero4 {
   background: url("Quadros/SLIDE4.png") no-repeat center center;
-  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  background-size: cover; 
   height: 70vh;
   display: flex;
   align-items: center;
@@ -553,7 +553,7 @@ body {
 /*HERO DRINKS*/
 .hero5 {
   background: url("Quadros/SLIDE5.jpg") no-repeat center center;
-  background-size: cover; /* garante que ocupa todo o espaço sem repetir */
+  background-size: cover; 
   height: 70vh;
   display: flex;
   align-items: center;
@@ -573,8 +573,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* overlay darkness */
-  z-index: 1; /* behind content */
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1; 
 }
 
 .hero2 .overlay,
@@ -590,7 +590,7 @@ body {
 .hero4 h1,
 .hero5 h1 {
   font-family: "Birthstone", cursive;
-  font-size: 80px; /* adjust if needed */
+  font-size: 80px;
   margin: 0;
 }
 
@@ -717,7 +717,7 @@ body {
 
 .btn-accent {
   background-color: #ff7f2a;
-  color: #fff;
+  color: transparent;
   border: none;
   padding: 8px 18px;
   border-radius: 8px;
@@ -727,4 +727,72 @@ body {
 
 .btn-accent:hover {
   background-color: #e76a1a;
+}
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  color: #ddd;
+  background: transparent;
+  text-decoration: none;
+  font-size: 13px;       
+  font-weight: 500;       
+  border: none;
+  cursor: pointer;
+  padding: 0;             
+  margin-left: 22px;      
+  font-family: inherit;   
+  display: inline-block;  
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222; 
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: transparent;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  color: #f0b90b; 
+}
+
+
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .dropdown-content a {
+    padding-left: 25px;
+  }
 }

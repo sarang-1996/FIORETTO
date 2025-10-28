@@ -23,18 +23,29 @@
   <body>
     <!-- NAVBAR -->
 <header class="topbar">
-        <div class="container navwrap">
-            <div class="logo">FIORETTO</div>
-            <nav class="mainnav">
-                <a href="index.html">HOME</a>
-                <a href="sobre.html">SOBRE NÓS</a>
-                <a class="active" href="menu.html">MENU</a>
-                <a href="galeria.html">GALERIA</a>
-                <a href="reservas.html">RESERVAS</a>
-                <a  href="contactos.html">CONTACTOS</a>
-            </nav>
-        </div>
-    </header>
+  <div class="container navwrap">
+    <div class="logo">FIORETTO</div>
+
+  <nav class="mainnav" id="mainnav">
+  <a href="index.html" class="active">HOME</a>
+  <a href="sobre.html">SOBRE NÓS</a>
+
+     
+  <!-- DROPDOWN MENU -->
+  <div class="dropdown">
+    <button class="dropbtn">MENU ▾</button>
+    <div class="dropdown-content">
+      <a href="starters.html" target="_blank">Entradas</a>
+      <a href="maincourses.html" target="_blank">Pratos Principais</a>
+      <a href="desserts.html" target="_blank">Sobremesas</a>
+      <a href="drinks.html" target="_blank">Bebidas</a>
+    </div>
+  </div>
+
+  <a href="galeria.html">GALERIA</a>
+  <a href="reservas.html">RESERVAS</a>
+  <a href="contactos.html">CONTACTOS</a>
+</nav>
 
         <!-- BOTÃO BURGER PARA MOBILE -->
 
@@ -45,7 +56,6 @@
         </div>
       </div>
     </header>
-
     <script>
       const burger = document.getElementById("burger");
       const nav = document.getElementById("mainnav");
