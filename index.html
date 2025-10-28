@@ -10,19 +10,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-
-<!-- NAVBAR -->
+   <!-- NAVBAR -->
 <header class="topbar">
-    <div class="container navwrap">
-        <div class="logo">FIORETTO</div>
-        <nav class="mainnav" id="mainnav">
-            <a href="index copy.html">HOME</a>
-            <a href="#">ABOUT</a>
-             <a href="menu.html">MENU</a>
-            <a href="#">GALLERY</a>
-            <a href="#">BLOG</a>
-            <a class="active" href="#">CONTACTS</a>
-        </nav>
+  <div class="container navwrap">
+    <div class="logo">FIORETTO</div>
+ 
+  <nav class="mainnav" id="mainnav">
+  <a href="index.html" class="active">HOME</a>
+  <a href="sobre.html">SOBRE NÓS</a>
+ 
+     
+  <!-- DROPDOWN MENU -->
+  <div class="dropdown">
+    <button class="dropbtn">MENU ▾</button>
+    <div class="dropdown-content">
+      <a href="starters.html" target="_blank">Entradas</a>
+      <a href="maincourses.html" target="_blank">Pratos Principais</a>
+      <a href="desserts.html" target="_blank">Sobremesas</a>
+      <a href="drinks.html" target="_blank">Bebidas</a>
+    </div>
+  </div>
+ 
+  <a href="galeria.html">GALERIA</a>
+  <a href="reservas.html">RESERVAS</a>
+  <a href="contactos.html">CONTACTOS</a>
+</nav>
+ 
 
    <!-- BOTÃO BURGER PARA MOBILE -->
 
@@ -47,36 +60,40 @@
 <section class="hero">
     <div class="overlay">
       <h1>Pizza que te enche a alma</h1>
-      <p>Fazemos pizzas tão boas que se derretem na tua boca!<br>Reserve online ou ligue para o 914568473</p>
       <a href="reservas.html"><button class="cta">Faça uma reserva</button></a>
     </div>
 </section>
 
 <!-- SECÇÃO PROMO -->
 <section class="promo-section">
-    <div class="promo-container">
-      <div class="promo-left">
+    <div class="promo-left">
         <div class="promo-images">
-          <div class="promo-card orange">
-            <p class="card-title">especialidade pizza</p>
-            <img src="Imagens/imagemPizza.jpg" alt="Pizza" class="card-figure">
-            <h2>APENAS 13.99€</h2>
-          </div>
-
-          <div class="promo-card gray">
-            <p class="card-title">Todas as segundas</p>
-            <img src="Imagens/imagemPizza2.jpg" alt="Desconto" class="card-figure">
-            <h2>-15% de desconto</h2>
-          </div>
+            <div class="promo-box">
+                <img src="Imagens/imagemPizza.jpg" alt="Special Pizza">
+                <div class="promo-banner orange">
+                    <p>Pizza Especial</p>
+                    <h3>APENAS $13.99</h3>
+                </div>
+            </div>
+            <div class="promo-box">
+                <img src="Imagens/imagemPizza2.jpg" alt="Monday Offer">
+                <div class="promo-banner gray">
+                    <p>Todas a Segundas Feiras</p>
+                    <h3>Desconto de 15%</h3>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="promo-right">
-        <h3>Chef do Fioretto</h3>
-        <p>Natural da cidade italiana de Nápoles, Simon é um dos melhores pizzaiolos de Portugal. Quer uma prova disso?</p>
-        <p>Na verdade, as pessoas vêm de cidades vizinhas só para experimentar uma fatia da sua pizza Marinara!</p>
-      </div>
+    </div>
+
+    <div class="promo-right">
+        <h3>Chefs do Fioretto</h3>
+        <p class="intro">Naturais da Madeira, Lisboa e Porto, os nossos pizzaiolos são os melhores de Portugal!</p>
+        <blockquote>
+        </blockquote>
+        <a href="#sobre.html" class="about-link">Sobre Nós</a>
     </div>
 </section>
+
 
 <!-- CATEGORIAS DE COMIDA -->
 <section class="food-categories">
@@ -128,18 +145,6 @@
       <h4>AMERICANA</h4>
       <div class="price">35€</div>
     </div>
-  </div>
-</section>
-
-<!-- RESERVA ONLINE -->
-<section class="book-online">
-  <div class="book-content">
-    <h3>Faça o seu pedido! RESERVE ONLINE!</h3>
-    <p>Cada pessoa que reservar mesa para esta sexta-feira à noite terá 10% de desconto em todos os itens do menu, incluindo bebidas sem álcool e alcoólicas!</p>
-    <a href="reservas.html"><button class="book-btn">RESERVE JÁ</button></a>
-  </div>
-  <div class="book-img">
-    <img src="Imagens/order_online.jpg" alt="Book Online Pizza" />
   </div>
 </section>
 
