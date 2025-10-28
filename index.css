@@ -21,7 +21,6 @@ html, body {
 /* NAVBAR */
 .topbar {
     background: #333;
-    color: #fff;
     position: relative;
     z-index: 1000;
 }
@@ -131,16 +130,16 @@ html, body {
 }
 
 /* SECÇÃO PROMO */
-.promo-section { display: flex; justify-content: center; padding: 60px 0; flex-wrap: wrap; }
+.promo-section { display: flex; justify-content: center; padding: 60px 0; padding-bottom: 10px; wrap; }
 .promo-card { color: #fff; text-align: center; padding: 20px; flex: 1 1 250px; display: flex; flex-direction: column; align-items: center; gap: 15px; border-radius: 8px; }
-.promo-card.orange { background: var(--accent); }
-.promo-card.gray { background: #333; }
+.promo-card.orange { background: var(--accent); margin-bottom: 20px; border-radius:8px ; }
+.promo-card.gray { background: #333;border-radius:8px; }
 .promo-right {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* reduced spacing between elements */
+    gap: 15px;
 }
 
 .promo-right h3 {
@@ -167,23 +166,29 @@ html, body {
     margin-top: 15px;
 }
 
+.promo-section {
+    background-color: #fae2b4;
+}
+
 
 /* SECÇÃO CATEGORIAS DE COMIDA */
 .food-categories {
     display: flex;
-    justify-content: center; /* center the cards */
+    justify-content: center; /* centrar os cartões */
     text-align: center;
-    gap: 20px; /* spacing between cards */
-    margin-top: 10px; /* reduce top margin (was larger before) */
+    gap: 20px; /*espaçamento entre cards */
+    margin-top: 30px;
     margin-left:90px;
+    margin-bottom: 50px;
   }
 
 .category { width: 250px; }
 .category img {
-    width: 100%; /* responsive width */
-    max-width: 250px; /* optional: limit width for better layout */
+    width: 100%; 
+    max-width: 250px;
     height: auto;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .category h4 {
@@ -191,7 +196,8 @@ html, body {
     color: #fff;
     padding: 10px 0;
     margin: 0;
-    width: 100%; /* ensures title box width matches the image */
+    width: 100%; 
+    border-radius: 8px;
 }
 
 /* SECÇÃO O CHEFE RECOMENDA */
@@ -210,6 +216,10 @@ html, body {
   border-radius: 4px;
 }
 .price { color: var(--accent); font-weight: bold; margin-top: 5px; }
+.chef-recommends {
+    background-color: #fae2b4;
+}
+
 
 /* RESERVAS ONLINE */
 .book-online { display: flex; justify-content: space-between; flex-wrap: wrap; padding: 40px 10%; background: #fff7f0; gap: 20px; }
