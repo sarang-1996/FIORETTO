@@ -128,7 +128,8 @@ body {
 
 /* HERO */
 .hero {
-  background: url("menuimage.jpg");
+  background: url("Imagens/menuimage.jpg") no-repeat center center;
+  background-size: cover; /* garante que cobre toda a tela sem repetir */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -137,6 +138,7 @@ body {
   color: white;
   position: relative;
 }
+
 .hero::before {
   content: "";
   position: absolute;
@@ -511,7 +513,7 @@ body {
 
 /*HERO STARTERS*/
 .hero2 {
-  background: url("SLIDE2.png") no-repeat center center;
+  background: url("Quadros/SLIDE2.png") no-repeat center center;
   background-size: cover; /* garante que ocupa todo o espaço sem repetir */
   height: 70vh;
   display: flex;
@@ -524,7 +526,7 @@ body {
 
 /*HERO MAIN COURSES*/
 .hero3 {
-  background: url("SLIDE3.png") no-repeat center center;
+  background: url("Quadros/SLIDE3.png") no-repeat center center;
   background-size: cover; /* garante que ocupa todo o espaço sem repetir */
   height: 70vh;
   display: flex;
@@ -537,7 +539,7 @@ body {
 
 /*HERO DESSERTS*/
 .hero4 {
-  background: url("SLIDE4.png") no-repeat center center;
+  background: url("Quadros/SLIDE4.png") no-repeat center center;
   background-size: cover; /* garante que ocupa todo o espaço sem repetir */
   height: 70vh;
   display: flex;
@@ -550,7 +552,7 @@ body {
 
 /*HERO DRINKS*/
 .hero5 {
-  background: url("SLIDE5.jpg") no-repeat center center;
+  background: url("Quadros/SLIDE5.jpg") no-repeat center center;
   background-size: cover; /* garante que ocupa todo o espaço sem repetir */
   height: 70vh;
   display: flex;
