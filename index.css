@@ -90,7 +90,7 @@ html, body {
  
  
 .dropdown:hover .dropbtn {
-  color: #f0b90b;
+  color: #80b8c5;
 }
  
  
@@ -174,7 +174,7 @@ html, body {
 /* CABEÇALHO */
 .hero {
   background: url('Imagens/Entrada.png') center/cover no-repeat;
-  height: 100vh;
+  height: 581px;
   display: flex;
   align-items: center;
   justify-content: center;
