@@ -462,7 +462,7 @@
         }
 
         .modal-header {
-            background: #ff9800;
+            background: #80b8c5;
             color: white;
             padding: 30px;
             border-radius: 20px 20px 0 0;
@@ -525,13 +525,13 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #ff9800;
+            border-color: #80b8c5;
         }
 
         .confirm-btn {
             width: 100%;
             padding: 15px;
-            background: #ff9800;
+            background: #80b8c5;
             color: white;
             border: none;
             border-radius: 8px;
@@ -542,7 +542,7 @@
         }
 
         .confirm-btn:hover {
-            background: #f57c00;
+            background: #80b8c5;
         }
 
         /* FOOTER */
