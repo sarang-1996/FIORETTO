@@ -56,8 +56,13 @@ html,body{height:100%;margin:0;font-family:'Montserrat',sans-serif;color:#333}
 
 
 /* footer */
-.site-footer{background:#fff;border-top:1px solid #f0f0f0;padding:28px 0;text-align:center;color:var(--muted)}
-
+.site-footer {
+            background-color: #3d3d3d;
+            color: #ffffff;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            border-top:1px solid #f0f0f0;
+            padding:28px 0;text-align:center;color:var(--muted)}
 
 /* Additional tiny styles to mimic typography */
 h1{font-weight:300}
