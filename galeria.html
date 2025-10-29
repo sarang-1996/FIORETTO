@@ -17,26 +17,38 @@
     <header class="topbar">
         <div class="container navwrap">
             <div class="logo">FIORETTO</div>
-            <nav class="mainnav">
-                <a href="index.html">HOME</a>
+
+            <nav class="mainnav" id="mainnav">
+                <a href="index.html" class="active">HOME</a>
                 <a href="sobre.html">SOBRE NÓS</a>
-                <a href="menu.html">MENU</a>
-                <a class="active" href="galeria.html">GALERIA</a>
+
+
+                <!-- DROPDOWN MENU -->
+                <div class="dropdown">
+                    <button class="dropbtn">MENU ▾</button>
+                    <div class="dropdown-content">
+                        <a href="starters.html" target="_blank">Entradas</a>
+                        <a href="maincourses.html" target="_blank">Pratos Principais</a>
+                        <a href="desserts.html" target="_blank">Sobremesas</a>
+                        <a href="drinks.html" target="_blank">Bebidas</a>
+                    </div>
+                </div>
+
+                <a href="galeria.html">GALERIA</a>
                 <a href="reservas.html">RESERVAS</a>
                 <a href="contactos.html">CONTACTOS</a>
             </nav>
+
+
+            <!-- BOTÃO BURGER PARA MOBILE -->
+
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </header>
-
-
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="#">Home</a>
-            <span>/</span>
-            <span class="muted">Galeria</span>
-        </div>
-    </div>
-
 
     <main>
         <section class="section-intro">
@@ -50,44 +62,58 @@
         <section class="gallery">
             <div class="gallery-row">
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/caprese.jpg"
                         alt="Pizza Margherita"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1548365328-9f547fb0951d?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/carne.jpg"
                         alt="Pizza Pepperoni"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1541542684-4a3a04f3c86a?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/bruschettaaa.jpg"
                         alt="Rustic Pie"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1541718190312-7c58ab4010f5?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/panza.png"
                         alt="Fresh Tomatoes Pizza"></figure>
             </div>
             <div class="gallery-row">
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/pizzas.jpg"
                         alt="Pizza Margherita"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1548365328-9f547fb0951d?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/starters2.jpg"
                         alt="Pizza Pepperoni"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1541542684-4a3a04f3c86a?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/capricciosa-pizza-1.jpg"
                         alt="Rustic Pie"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1541718190312-7c58ab4010f5?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/salada.png"
                         alt="Fresh Tomatoes Pizza"></figure>
             </div>
             <div class="gallery-row">
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/pasta.png"
                         alt="Pizza Margherita"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1548365328-9f547fb0951d?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/foccacia.png"
                         alt="Pizza Pepperoni"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1541542684-4a3a04f3c86a?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/pictures-of-pizza-23-1.jpg"
                         alt="Rustic Pie"></figure>
                 <figure class="card"><img
-                        src="https://images.unsplash.com/photo-1541718190312-7c58ab4010f5?q=80&w=1400&auto=format&fit=crop"
+                        src="Imagens/Starters.webp"
+                        alt="Fresh Tomatoes Pizza"></figure>
+            </div>
+            <div class="gallery-row">
+                <figure class="card"><img
+                        src="Imagens/gamberetti.png"
+                        alt="Pizza Margherita"></figure>
+                <figure class="card"><img
+                        src="Imagens/imagemPizza.jpg"
+                        alt="Pizza Pepperoni"></figure>
+                <figure class="card"><img
+                        src="Imagens/aperolmenu.jpg"
+                        alt="Rustic Pie"></figure>
+                <figure class="card"><img
+                        src=""
                         alt="Fresh Tomatoes Pizza"></figure>
             </div>
         </section>
@@ -102,14 +128,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-

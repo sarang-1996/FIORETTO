@@ -17,26 +17,38 @@
     <header class="topbar">
         <div class="container navwrap">
             <div class="logo">FIORETTO</div>
-            <nav class="mainnav">
-                <a href="index.html">HOME</a>
-                <a class="active" href="sobre.html">SOBRE NÓS</a>
-                <a href="menu.html">MENU</a>
+
+            <nav class="mainnav" id="mainnav">
+                <a href="index.html" class="active">HOME</a>
+                <a href="sobre.html">SOBRE NÓS</a>
+
+
+                <!-- DROPDOWN MENU -->
+                <div class="dropdown">
+                    <button class="dropbtn">MENU ▾</button>
+                    <div class="dropdown-content">
+                        <a href="starters.html" target="_blank">Entradas</a>
+                        <a href="maincourses.html" target="_blank">Pratos Principais</a>
+                        <a href="desserts.html" target="_blank">Sobremesas</a>
+                        <a href="drinks.html" target="_blank">Bebidas</a>
+                    </div>
+                </div>
+
                 <a href="galeria.html">GALERIA</a>
                 <a href="reservas.html">RESERVAS</a>
                 <a href="contactos.html">CONTACTOS</a>
             </nav>
+
+
+            <!-- BOTÃO BURGER PARA MOBILE -->
+
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </header>
-
-
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="#">Home</a>
-            <span>/</span>
-            <span class="muted">Sobre Nós</span>
-        </div>
-    </div>
-
 
     <main>
         <section class="hero">
@@ -85,7 +97,7 @@
             </blockquote>
         </section>
 
-         <section class="hero">
+        <section class="hero">
             <img src="https://images.unsplash.com/photo-1603048297219-d5c22fcf04e7?q=80&w=1400&auto=format&fit=crop"
                 alt="Flour, tomatoes, and olive oil">
         </section>

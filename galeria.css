@@ -2,7 +2,7 @@
 
 :root {
     --dark: #2f2f2f;
-    --accent: #ff7f2a;
+    --accent: #39748e;
     --muted: #9a9a9a;
     --maxw: 1100px;
 }
@@ -25,34 +25,178 @@ body {
     padding: 0 30px
 }
 
-
 .topbar {
     background: #333;
-    color: #fff
+    position: relative;
+    z-index: 1000;
 }
 
 .navwrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 0
+    padding: 22px 0;
 }
 
 .logo {
     letter-spacing: 3px;
-    font-weight: 600
+    font-weight: 600;
+    color: #fff;
+    font-size: 24px;
 }
 
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    color: #ddd;
+    background: transparent;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 22px;
+    font-family: inherit;
+    display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+    color: #f0b90b;
+}
+
+
+@media (max-width: 768px) {
+    .dropdown-content {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .dropdown-content a {
+        padding-left: 25px;
+    }
+}
+
+
+/* MENU DESKTOP */
 .mainnav a {
     color: #ddd;
     text-decoration: none;
     margin-left: 22px;
-    font-size: 13px
+    font-size: 13px;
+    transition: color 0.3s;
 }
 
+.mainnav a:hover,
 .mainnav a.active {
-    color: var(--accent)
+    color: var(--accent);
 }
+
+/* MENU BURGER */
+.burger {
+    display: none;
+    /* escondido no desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.burger div {
+    height: 3px;
+    width: 100%;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .mainnav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .mainnav a {
+        margin: 10px 0;
+    }
+
+    .mainnav.active {
+        display: flex;
+    }
+}
+
+.burger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mainnav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 20px;
+}
+
 
 .cart {
     margin-left: 12px
@@ -63,26 +207,6 @@ body {
     margin-left: 6px
 }
 
-/* Breadcrumb */
-.breadcrumb {
-    background: #fff;
-    padding: 34px 0;
-    border-bottom: 1px solid #f0f0f0
-}
-
-.breadcrumb a {
-    color: var(--accent);
-    text-decoration: none;
-    margin-right: 12px
-}
-
-.breadcrumb .muted {
-    color: #bdbdbd;
-    margin-left: 12px
-}
-
-
-/* Intro */
 .section-intro {
     padding: 42px 0 18px
 }
