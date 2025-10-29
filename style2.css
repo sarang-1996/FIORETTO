@@ -757,7 +757,6 @@ body {
   color: #80b8c5; 
 }
 
-
 @media (max-width: 768px) {
   .dropdown-content {
     position: static;
