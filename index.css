@@ -174,7 +174,7 @@ html, body {
 /* CABEÇALHO */
 .hero {
   background: url('Imagens/Entrada.png') center/cover no-repeat;
-  height: 100vh;
+  height: 581px;
   display: flex;
   align-items: center;
   justify-content: center;
