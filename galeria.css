@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+:root {
+    --dark: #2f2f2f;
+    --accent: #ff7f2a;
+    --muted: #9a9a9a;
+    --maxw: 1100px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333
+}
+
+.container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 30px
+}
+
+
+.topbar {
+    background: #333;
+    color: #fff
+}
+
+.navwrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0
+}
+
+.logo {
+    letter-spacing: 3px;
+    font-weight: 600
+}
+
+.mainnav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 13px
+}
+
+.mainnav a.active {
+    color: var(--accent)
+}
+
+.cart {
+    margin-left: 12px
+}
+
+.cartcount {
+    color: var(--accent);
+    margin-left: 6px
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #fff;
+    padding: 34px 0;
+    border-bottom: 1px solid #f0f0f0
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 12px
+}
+
+.breadcrumb .muted {
+    color: #bdbdbd;
+    margin-left: 12px
+}
+
+
+/* Intro */
+.section-intro {
+    padding: 42px 0 18px
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 54px;
+    text-align: center;
+    margin: 10px 0 10px;
+    color: #3b3b3b
+}
+
+.page-lead {
+    max-width: 1400px;
+    text-align: center;
+    margin: 0 auto;
+    color: #6c6c6c;
+    font-size: 24px;
+    line-height: 1.45
+}
+
+.gallery {
+    padding: 18px 0
+}
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 30px
+}
+
+.card {
+    position: relative;
+    overflow: hidden
+}
+
+.card img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    display: block
+}
+
+@media (max-width:1100px) {
+    .gallery-row {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .card img {
+        height: 300px
+    }
+}
+
+@media (max-width:640px) {
+    .navwrap {
+        flex-direction: column;
+        gap: 12px
+    }
+
+    .mainnav a {
+        margin: 0 10px
+    }
+
+    .gallery-row {
+        grid-template-columns: 1fr;
+        padding: 0 18px
+    }
+
+    .page-title {
+        font-size: 40px
+    }
+
+    .page-lead {
+        font-size: 18px
+    }
+}
+
+.site-footer {
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+    padding: 28px 0;
+    text-align: center;
+    color: var(--muted)
+}
+
+h1 {
+    font-weight: 300
+}

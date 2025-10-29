@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contacts — Mia Ittalonni</title>
+    <title>Contactos</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<header class="topbar">
+    <header class="topbar">
         <div class="container navwrap">
             <div class="logo">FIORETTO</div>
             <nav class="mainnav">
@@ -57,13 +57,11 @@
             </div>
         </section>
 
-
-        <!-- MAP SECTION - replace background-image in styles.css .map if you prefer an iframe. -->
-        <section class="map">
-            <!-- Option A: Use background image set in CSS (recommended for exact look)
-Option B: Replace the <div> below with an <iframe> embed from Google Maps if you want an interactive map. -->
-            <div class="map-inner">
-                <!-- placeholder - leave empty, map handled by CSS background or replace with iframe -->
+        <section class="map" id="map">
+            <div class="map-wrap">
+                <iframe class="map-iframe" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Porto,Portugal&hl=pt-PT&z=13&output=embed">
+                </iframe>
             </div>
         </section>
     </main>
@@ -72,6 +70,8 @@ Option B: Replace the <div> below with an <iframe> embed from Google Maps if you
     <footer class="site-footer">
         <div class="container">&copy; 2025 Fioretto</div>
     </footer>
+
+
 </body>
 
 </html>
