@@ -96,9 +96,8 @@ body {
 
 
 .dropdown:hover .dropbtn {
-    color: #f0b90b;
+  color: #80b8c5; 
 }
-
 
 @media (max-width: 768px) {
     .dropdown-content {
