@@ -8,9 +8,9 @@ Este projeto consiste no desenvolvimento de um website para o restaurante "Flore
 
 O trabalho foi dividido entre os três membros da equipa da seguinte forma:
 
-- A Catarina ficou responsável pela Página Inicial e pela secção de Reservas. A Página Inicial apresenta o restaurante, a sua identidade e novidades, enquanto a secção de Reservas permite aos utilizadores efetuar reservas online de forma simples e intuitiva.  
+- A Catarina ficou responsável pela Página Inicial e pela secção de Reservas. A Página Inicial apresenta o restaurante, a sua identidade e novidades, enquanto a secção de Reservas permite aos utilizadores efetuarem reservas online de forma simples e intuitiva.  
 - A Sara ficou responsável pela secção Menu, onde são apresentados todos os pratos e bebidas disponíveis no restaurante, com organização clara e visual apelativo.  
-- O Diogo ficou responsável pelas secções Contactos e Galeria. Na secção de Contactos encontram-se as informações de contacto do restaurante, incluindo morada, telefone e email, enquanto a Galeria apresenta fotografias do espaço e dos pratos, ajudando a transmitir a atmosfera do restaurante aos visitantes do website.
+- O Diogo ficou responsável pelas secções Sobre Nós, Contactos e Galeria. Na secção de Contactos encontram-se as informações de contacto do restaurante, incluindo morada, telefone e email, enquanto a Galeria apresenta fotografias do espaço e dos pratos, ajudando a transmitir a atmosfera do restaurante aos visitantes do website.
 
 ----//--------
 
