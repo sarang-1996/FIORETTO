@@ -768,3 +768,253 @@ body {
     padding-left: 25px;
   }
 }
+
+
+/* ============================
+   GRID INTERATIVO DE PRATOS
+   ============================ */
+.menu-grid-section {
+  background: #80b8c5;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+.menu-section-title {
+  font-family: "Birthstone", cursive;
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.menu-intro {
+  color: #e8e8e8;
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-family: "Jura", sans-serif;
+}
+
+/* 2x2 layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.05);
+}
+
+.menu-overlay.double {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.68);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  transition: opacity 0.4s ease;
+}
+
+.menu-item:hover .menu-overlay {
+  opacity: 1;
+}
+
+/* Dois pratos empilhados */
+.menu-overlay.double .dish {
+  margin: 10px 0;
+  max-width: 85%;
+}
+
+.menu-overlay.double h3 {
+  font-size: 22px;
+  font-family: "Jura", sans-serif;
+  margin-bottom: 5px;
+}
+
+.menu-overlay.double h3 span {
+  color: #80b8c5;
+  margin-left: 6px;
+  font-size: 18px;
+}
+
+.menu-overlay.double p {
+  font-size: 15px;
+  color: #f0f0f0;
+  margin-bottom: 5px;
+}
+
+/* linha divisória entre pratos */
+.divider {
+  width: 60%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 8px 0;
+}
+
+.menu-overlay button {
+  margin-top: 20px;
+  border-color: #fff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.menu-overlay button:hover {
+  background: #80b8c5;
+  border-color: #80b8c5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item img {
+    height: 300px;
+  }
+
+  .menu-section-title {
+    font-size: 46px;
+  }
+}
+
+/* Eliminar espaço branco entre secção e footer */
+.menu-grid-section {
+  background: #80b8c5;
+  padding: 80px 0 120px 0; /* aumenta padding inferior para preencher melhor */
+  margin-bottom: 0;
+}
+
+footer,
+.site-footer {
+  margin-top: 0 !important;
+  padding-top: 30px;
+  background-color: #2d2d2d;
+  color: #ccc;
+}
+
+body {
+  background-color: #80b8c5; /* garante que o fundo da página é azul */
+}
+
+
+.desserts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  align-items: start;
+}
+
+.images-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.images-group img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.text-box {
+  background-color: #80b8c5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.text-box .dish {
+  margin-bottom: 20px;
+}
+
+.text-box .dish h3 {
+  color: #fff5c4;
+  margin: 0 0 5px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-box .dish p {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .desserts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .desserts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.polaroid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  perspective: 1000px;
+}
+
+.polaroid {
+  background: #80b8c5;
+  border-radius: 10px;
+  padding: 10px 10px 20px;
+  width: 200px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  transform: rotate(calc(-5deg + 10deg * random()));
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.polaroid .caption {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+  z-index: 10;
+}
