@@ -96,7 +96,7 @@ body {
 
 
 .dropdown:hover .dropbtn {
-    color: #f0b90b;
+    color: #80b8c5;
 }
 
 @media (max-width: 768px) {
@@ -378,4 +378,53 @@ body {
 
 h1 {
     font-weight: 300
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .mainnav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .mainnav a {
+    margin: 10px 0;
+  }
+
+  .mainnav.active {
+    display: flex;
+  }
+}
+
+.burger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active div:nth-child(2) {
+  opacity: 0;
+}
+.burger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.mainnav.open {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #333;
+  padding: 20px;
 }

@@ -40,16 +40,24 @@
             </nav>
 
 
-            <!-- BOTÃO BURGER PARA MOBILE -->
+           <!-- BOTÃO BURGER PARA MOBILE -->
 
-            <div class="burger" id="burger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </header>
+    </div>
+</header>
 
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('mainnav');
+
+  burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+  });
+</script>
     <main>
         <section class="hero">
             <img src="Imagens/ChatGPT Image 28_10_2025, 09_53_45.png" alt="Flour, tomatoes, and olive oil">
