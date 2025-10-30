@@ -1018,3 +1018,20 @@ body {
   box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
   z-index: 10;
 }
+
+/* Remove o "volume" no texto e sombras dentro do modal */
+.modal-content {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  background-color: #ffffff !important;
+  color: rgb(83, 117, 136) !important;
+}
+
+/* Garante que o conteúdo textual dentro do modal fique plano e limpo */
+.modal-content * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  background: none !important;
+}
