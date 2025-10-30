@@ -9,7 +9,7 @@
 
 * { box-sizing: border-box; }
 
-html, body {
+ body {
   height: 100%;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -270,6 +270,7 @@ html, body {
 }
 
 .promo-right h3 {
+  font-family: 'Playfair Display', serif;
     margin-top: 0;
     font-weight: 600;
     font-size: 40px;
@@ -289,8 +290,13 @@ blockquote {
     padding-left: 12px;
     line-height: 1.6;
 }
+.recomendacoes{
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+}
 
 .about-link {
+  font-family: 'Playfair Display', serif;
     color: var(--accent);
     text-decoration: none;
     font-size: 25px;

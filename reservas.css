@@ -193,10 +193,9 @@
         }
 
         .header h1 {
-            font-size: clamp(40px, 8vw, 100px);
+            font-family: 'Playfair Display', serif;
             color: #333;
             margin-bottom: 5px;
-            font-weight: bold;
             text-align: center;
             padding: 0% 0;
         }
@@ -438,6 +437,7 @@
 
         /* MODAL */
         .modal {
+            font-family: 'Montserrat', sans-serif;
             display: none;
             position: fixed;
             z-index: 10000;
